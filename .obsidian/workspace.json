@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fb1c8ec5c26cf366",
+        "id": "dccbfdd4834940cf",
         "type": "tabs",
         "children": [
           {
-            "id": "7403ed8009f595c8",
+            "id": "e6375e79f88c9897",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,7 +17,9 @@
                 "mode": "preview",
                 "backlinks": false,
                 "source": true
-              }
+              },
+              "icon": "lucide-file",
+              "title": "INDEX"
             }
           }
         ]
@@ -32,7 +34,7 @@
       {
         "id": "b0963ff0c5da124c",
         "type": "tabs",
-        "dimension": 23.060344827586206,
+        "dimension": 24.759080800593033,
         "children": [
           {
             "id": "a58c95d8f0002a0b",
@@ -41,7 +43,9 @@
               "type": "image",
               "state": {
                 "file": "Assets/Images/header.png"
-              }
+              },
+              "icon": "lucide-image",
+              "title": "header"
             }
           }
         ]
@@ -49,7 +53,7 @@
       {
         "id": "ec977c9092a10bf2",
         "type": "tabs",
-        "dimension": 76.9396551724138,
+        "dimension": 75.24091919940697,
         "children": [
           {
             "id": "e493bc2564fcbecb",
@@ -58,14 +62,16 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 346.5
   },
   "right": {
     "id": "cbcc3a597fb0833b",
@@ -74,14 +80,16 @@
       {
         "id": "36fb3699cc5e9295",
         "type": "tabs",
-        "dimension": 20.617816091954023,
+        "dimension": 23.77873563218391,
         "children": [
           {
             "id": "34783b92fcf002b0",
             "type": "leaf",
             "state": {
               "type": "graph",
-              "state": {}
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -89,7 +97,7 @@
       {
         "id": "1f6fc3dcaa6b4b26",
         "type": "tabs",
-        "dimension": 79.38218390804597,
+        "dimension": 76.22126436781609,
         "children": [
           {
             "id": "37992ec5383e3e3d",
@@ -99,7 +107,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -114,7 +124,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -131,14 +143,16 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for INDEX"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 344.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,37 +162,38 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7403ed8009f595c8",
+  "active": "e6375e79f88c9897",
   "lastOpenFiles": [
-    "README.md",
-    "INDEX.md",
-    "Assets/Templates/LOCALE.md",
-    "Assets/Templates/LANDMARK.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/fixed/fixed.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/fixed",
-    "Assets/Templates/NOTE.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Waterdeep/Waterdeep.md",
-    "Compendium/Atlas/broken 2/broken 2.md",
-    "Compendium/Atlas/broken 2",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/broken/broken.md",
-    "{broken.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/broken",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Baldurs Gate/Baldurs Gate.md",
-    "Assets/Templates/CONTINENT.md",
-    "Compendium/Party/Quests/Double Trouble.md",
     "Compendium/Party/Player Characters/Alaric Waycrest.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Baldurs Gate/Sorcerous Sundries.md",
-    "Compendium/Party/Player Characters/Kingston Yashkar.md",
-    "Assets/Templates/STARTUP.md",
-    "Assets/Templates/REALM.md",
-    "Assets/Templates/OBJECT.md",
+    "INDEX.md",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Baldurs Gate/Baldurs Gate.md",
+    "Assets/Templates/REFRESH.md",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Waterdeep/City of the Dead.md",
+    "Compendium/NPC's/Tinkera Drenn.md",
+    "README.md",
     "Compendium/NPC's/Eleidin Verlice.md",
-    "Compendium/Party/Quests/temp.md",
-    "Compendium/Lore/Deities/temp.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/The Sword Coast.md",
-    "Compendium/Lore/Deities/Beshaba.md",
-    "Compendium/Party/Player Characters/Tilda Rosesong.md",
+    "Compendium/Party/Player Characters/Kingston Yashkar.md",
     "Compendium/Party/Player Characters/Moira Belkas.md",
+    "Compendium/NPC's/Paloma Beltre.md",
+    "Assets/Templates/PLAYER.md",
+    "Session Notes/Session 01 (2024-02-17).md",
+    "Session Notes/Session 02 (2024-02-17).md",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Baldurs Gate/Elfsong Tavern.md",
+    "Compendium/Party/Quests/Take Five.md",
+    "Compendium/Lore/Deities/turdy.md",
+    "Compendium/Party/Player Characters/Untitled.md",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/The Sword Coast.md",
+    "Compendium/NPC's/Untitled.md",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/Faerûn.md",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Waterdeep/Waterdeep.md",
+    "Compendium/Lore/Deities/Tymora.md",
+    "Assets/Templates/GOD.md",
+    "Session Notes/temp.md",
+    "Compendium/Lore/Organizations/temp.md",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Waterdeep/dwarf statue",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/fixed",
+    "Compendium/Atlas/broken 2",
+    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/broken",
     "Assets/Images/header.png"
   ]
 }

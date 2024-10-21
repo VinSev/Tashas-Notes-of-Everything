@@ -32,7 +32,6 @@
     "test",
     "Tabs",
     "Columns",
-    "Callouts",
     "Cards",
     "Buttons",
     "Embed Adjustments",
@@ -42,7 +41,8 @@
     "Popup",
     "NPC Toggle",
     "Modal Form",
-    "Lists"
+    "Lists",
+    "Callouts"
   ],
   "baseFontSizeAction": false,
   "accentColor": "#8a5cf5",

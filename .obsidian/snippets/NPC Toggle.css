@@ -4,111 +4,115 @@ author: @KevinKickback
 https://github.com/kevinkickback/Tashas-Notes-of-Everything
 */
 
-/* Hide checkbox */ 
+/* Hide checkbox */
 input[type="checkbox"][id="npc"] {
 	display: none;
 }
 
-/* remove default dropdown icon */ 
+/* remove default dropdown icon */
 .dropdown.npcedit.has-list-bullet {
 	background-image: none;
 }
 
-/* edit default dropdown style */ 
+/* edit dropdown style */
 ul li ul.dropdown.npcedit {
-  min-width: 180px;
-  display: none;
-  border: 1px solid var(--interactive-accent);
-  padding: 5px;
-  background-image: none;	
+	min-width: 180px;
+	display: none;
+	border: 1px solid var(--interactive-accent);
+	padding: 5px;
+	background-image: none;
 }
 
-/* dropdown mobile size */ 
+ul.dropdown.npcedit > li {
+	margin-inline-start: 0 !important;
+}
+
+/* dropdown mobile size */
 .is-mobile ul li ul.dropdown.npcedit {
-  min-width: 240px;	
+	min-width: 240px;
 }
 
-/* display dropdown menu on hover */ 
-  ul li:hover ul.dropdown.npcedit {
-  display: block;
+/* display dropdown menu on hover */
+ul li:hover ul.dropdown.npcedit {
+	display: block;
 }
 
-/* remove dropdown default bullets */ 
-.sortMenu .list-bullet::after  { 
-background-color: transparent;
-display: none;
+/* remove dropdown default bullets */
+.sortMenu .list-bullet::after {
+	background-color: transparent;
+	display: none;
 }
 
-/* dropdown menu icon */ 
+/* dropdown menu icon */
 .sortMenu {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 .sortIcon {
-  float: right;
-  padding-left: 3px;
-  padding-right: 3px;
-  border-radius: 5px;
-  height: 27px;
-  background-color: var(--interactive-accent);
+	float: right;
+	padding-left: 3px;
+	padding-right: 3px;
+	border-radius: 5px;
+	height: 27px;
+	background-color: var(--interactive-accent);
 }
 .sortIcon svg {
-  margin-top: -2em;
-  color: #a5a3a3;
+	margin-top: -2em;
+	color: #a5a3a3;
 }
 
-/* dropdown menu styles */ 
+/* dropdown menu styles */
 .dropdown.npcedit {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  display: none;
-  z-index: 999;
-  border: 1px solid var(--interactive-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-m);
-  height: auto;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	display: none;
+	z-index: 999;
+	border: 1px solid var(--interactive-accent);
+	background-color: var(--background-secondary);
+	border-radius: var(--radius-m);
+	height: auto;
 }
 
 .dropdown.npcedit:hover {
-  background-color: var(--background-secondary);
+	background-color: var(--background-secondary);
 }
 
 .dropdown.npcedit li label {
-  display: block;
-  width: 100%;
-  padding: 3px 5px;
-  font-size: 1em;
-  color: var(--text-normal);
-  cursor: pointer;
+	display: block;
+	width: 100%;
+	padding: 3px 5px;
+	font-size: 1em;
+	color: var(--text-normal);
+	cursor: pointer;
 }
 
 .dropdown.npcedit li:hover {
-  background-color: var(--background-modifier-hover);
+	background-color: var(--background-modifier-hover);
 }
 
 .is-mobile ul.dropdown.npcedit {
 	padding-inline-start: 5px;
 }
 
-/* selected option bullet indicator */ 
+/* selected option bullet indicator */
 .active::after {
-  content: '';
-  width: 6px;
-  height: 6px;
-  margin-top: 4px;
-  background-color: grey;
-  border-radius: 50%;
-  float: right;
+	content: "";
+	width: 6px;
+	height: 6px;
+	margin-top: 4px;
+	background-color: grey;
+	border-radius: 50%;
+	float: right;
 }
 
-/* adjust dataview list margin */ 
+/* adjust dataview list margin */
 .npcDirect {
 	margin-top: -50px;
 	min-height: 100px;
 	float: left;
 }
-.npcChild  {
+.npcChild {
 	margin-top: -50px;
 	min-height: 120px;
 	float: left;

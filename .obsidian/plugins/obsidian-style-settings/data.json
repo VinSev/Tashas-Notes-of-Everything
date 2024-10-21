@@ -90,10 +90,10 @@
   "buttons-styles@@button-border@@dark": "#979797",
   "buttons-styles@@button-box-shadow@@dark": "#6C35AA",
   "buttons-styles@@button-text@@dark": "#B78CDC",
-  "obsidian-prism-theme@@pt-disable-callout-styling": false,
+  "obsidian-prism-theme@@pt-disable-callout-styling": true,
   "obsidian-prism-theme@@pt-disable-mark-highlight-styling": false,
   "obsidian-prism-theme@@pt-collapsed-pinned-tab": false,
-  "obsidian-prism-theme@@pt-custom-vault-banner": true,
+  "obsidian-prism-theme@@pt-custom-vault-banner": false,
   "obsidian-prism-theme@@status-bar-preset-dt": "pt-status-bar-default-dt",
   "obsidian-prism-theme@@pt-pdf-dark-theme": false,
   "obsidian-prism-theme@@color-schemes-lt": "pt-color-scheme-peach-lt",
@@ -108,5 +108,7 @@
   "image-adjustments@@img-adj-list": true,
   "obsidian-prism-theme@@pt-font-disable-ligatures": false,
   "obsidian-prism-theme@@pt-file-explorer-folder-icon-color": "pt-file-explorer-folder-icon-default",
-  "obsidian-prism-theme@@pt-colored-folders": false
+  "obsidian-prism-theme@@pt-colored-folders": false,
+  "obsidian-prism-callouts@@prism-callout": true,
+  "obsidian-prism-theme@@inline-title-color-dt": "var(--color-purple-text)"
 }

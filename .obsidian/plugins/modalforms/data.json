@@ -14,7 +14,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -85,7 +86,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -131,7 +133,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -157,7 +160,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -286,7 +290,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -322,7 +327,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -358,7 +364,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -367,7 +374,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "date"
+            "type": "date",
+            "hidden": false
           }
         },
         {
@@ -407,7 +415,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -433,7 +442,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -469,7 +479,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         }
       ],
@@ -485,7 +496,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -541,7 +553,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -567,7 +580,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -604,7 +618,8 @@
           "description": "",
           "isRequired": true,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -623,7 +638,8 @@
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         },
         {
@@ -652,7 +668,8 @@
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "text"
+            "type": "text",
+            "hidden": false
           }
         }
       ],

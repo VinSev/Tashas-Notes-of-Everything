@@ -5,154 +5,166 @@ https://github.com/damiankorcz/Prism-Theme
 https://github.com/kevinkickback/Tashas-Notes-of-Everything
 */
 
-/* Lighten the background */ 
-.theme-dark.pt-color-scheme-raven-dt { 
- --background-secondary-alt: hsl(0 0% 9%);
+/* Lighten the background */
+.theme-dark.pt-color-scheme-raven-dt {
+	--background-secondary-alt: hsl(0 0% 9%);
 }
 
 /* navigation font size */
 body {
 	--nav-item-size: 18px;
-}	
+}
 
 /* line seperator spacing */
 hr {
-    margin: -4px 0 10px 0;
+	margin: -4px 0 10px 0;
 }
 
 /* Header 6 adjustments */
 h6 {
-  margin-top: 0 !important;
+	margin-top: 0 !important;
 }
 .index h6 {
-  margin-top: 0.7em !important;
+	margin-top: 0.7em !important;
 }
-.is-phone h6, .is-phone span.sub2 {
+.is-phone h6,
+.is-phone span.sub2 {
 	display: block;
 	padding: 0 !important;
 	text-align: center;
 }
 
-/* H6 look like H1  */ 
-h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
-    font-variant: var(--h1-variant);
-    letter-spacing: 0.015em;
-    font-size: var(--h1-size);
-    line-height: var(--h1-line-height);
-    color: var(--h1-color);
-    font-weight: var(--h1-weight);
-    font-style: var(--h1-style);
-    font-family: var(--h1-font);
-	background-image: linear-gradient(var(--interactive-accent-base), rgba(255,0,0,0));
+/* H6 look like H1  */
+h6,
+.markdown-rendered h6,
+.HyperMD-header-6,
+.HyperMD-list-line .cm-header-6 {
+	font-variant: var(--h1-variant);
+	letter-spacing: 0.015em;
+	font-size: var(--h1-size);
+	line-height: var(--h1-line-height);
+	color: var(--h1-color);
+	font-weight: var(--h1-weight);
+	font-style: var(--h1-style);
+	font-family: var(--h1-font);
+	background-image: linear-gradient(
+		var(--interactive-accent-base),
+		rgba(255, 0, 0, 0)
+	);
 	padding-left: 10px;
 	margin-bottom: -15px;
 	border-radius: 8px;
 }
 
-/* Custom Header and Sub styling */ 
+/* Custom Header and Sub styling */
 span.head {
-    display: table;
-    margin: -25px auto 20px auto;
+	display: table;
+	margin: -25px auto 20px auto;
 }
 span.sub {
-    display: flex;
+	display: flex;
 	font-size: var(--font-text-size);
 	font-weight: normal;
 	font-style: italic;
-    line-height: 1em;
-    color: var(--text-muted);
+	line-height: 1em;
+	color: var(--text-muted);
 }
 span.sub2 {
-    padding-left: 10px;
+	padding-left: 10px;
 }
 .is-phone .index span.head {
 	text-align: center;
 }
 
-/* Hide H4 */ 
+/* Hide H4 */
 h4 {
 	display: none;
 }
 
-/* Icons */ 
+/* Icons */
 .cm-iconize-icon {
-  color: var(--interactive-accent);
+	color: var(--interactive-accent);
 }
 .tree-item .iconize-icon {
-  color: var(--interactive-accent);
+	color: var(--interactive-accent);
 }
 .tree-item-self.fn-is-active .iconize-icon,
 .tree-item-self.is-active .iconize-icon {
-  color: white;
+	color: white;
 }
 .tree-item-self:hover svg {
-  color: unset !important;
+	color: unset !important;
 }
 .goldcoin svg {
 	color: #efe03a !important;
 }
-.silvercoin  svg {
+.silvercoin svg {
 	color: #dbdbdb !important;
 }
 .coppercoin svg {
 	color: #bb9300 !important;
 }
 
-/* Left Sidebar Image */ 
+/* Left Sidebar Image */
 .workspace-split.mod-left-split .view-content {
 	padding: 0 !important;
 }
 
-/* Disable header flash on link click */ 
+/* Disable header flash on link click */
 .is-flashing {
-	background-color: rgba(255,0,0,0)!important;
+	background-color: rgba(255, 0, 0, 0) !important;
 }
 
-/* style toast notifications */ 
+/* style toast notifications */
 div.notice-container div.notice {
-  font-size: 16px;
-  color: var(--text-normal);
-  background: var(--interactive-accent-base);
-  border: 2px solid var(--interactive-accent-tint);
-  border-radius: var(--radius-m);
-  box-shadow: var(--shadow-s);
+	font-size: 16px;
+	color: var(--text-normal);
+	background: var(--interactive-accent-base);
+	border: 2px solid var(--interactive-accent-tint);
+	border-radius: var(--radius-m);
+	box-shadow: var(--shadow-s);
 }
 
 /* Remove bottom padding from workspace */
-.markdown-preview-section:not(.popover.hover-popover .markdown-preview-section) {
-    padding-bottom: 30px !important;
+.markdown-preview-section:not(
+		.popover.hover-popover .markdown-preview-section
+	) {
+	padding-bottom: 30px !important;
 }
-.is-phone .markdown-preview-section:not(.popover.hover-popover .markdown-preview-section) {
-    padding-bottom: 80px !important;
+.is-phone
+	.markdown-preview-section:not(
+		.popover.hover-popover .markdown-preview-section
+	) {
+	padding-bottom: 80px !important;
 }
 
 /* Disable pointer cursor on folder note titles */
 .tree-item-inner {
-  cursor: default !important;
+	cursor: default !important;
 }
 
 /* Modal Form changes */
 .modal-form input[type="date"] {
-  min-width: 170px;
-  font-size: 1.1em;
+	min-width: 170px;
+	font-size: 1.1em;
 }
 .modal-form select.dropdown {
-  min-width: 170px;
-  font-size: 1em;
+	min-width: 170px;
+	font-size: 1em;
 }
 .suggestion-container {
-  min-width: 170px;
+	min-width: 170px;
 }
 .modal-close-button {
-  display: none;
+	display: none;
 }
 .modal-form h1 {
-  text-align: center;
+	text-align: center;
 }
 .modal-form .setting-item {
-  padding-left: 5px;
-  padding-right: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .modal-form .setting-item:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.15) !important;
+	background-color: rgba(0, 0, 0, 0.15) !important;
 }
