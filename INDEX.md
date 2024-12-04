@@ -49,7 +49,7 @@ dv.table(["cover", "name", "details"],
 > let pages = dv.pages('"Compendium/Atlas"').sort(p => p.file.name, "asc");  
 > dv.table(["Name", "Type"], pages.map(page => [`- ${page.headerLink} (${page.type})`, page.type]));
 >```
->`BUTTON[plane, realm, continent, region, locale, landmark]`
+>`BUTTON[plane, realm, continent, territory, province, locale, landmark]`
 
 > [!lore]-  Lore & Mythos<br><span class="sub">Factions, Gods, Relics, & More</span> 
 > ```dataviewjs

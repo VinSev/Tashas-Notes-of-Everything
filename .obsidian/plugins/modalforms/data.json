@@ -348,7 +348,7 @@
           "isRequired": false,
           "input": {
             "type": "dataview",
-            "query": "dv.pages('\"Compendium/Atlas\"').where(p => p.type === \"region\").file.name;"
+            "query": "dv.pages('\"Compendium/Atlas\"').where(p => p.type === \"territory\" || p.type === \"province\").file.name;"
           }
         }
       ],
@@ -571,8 +571,45 @@
       "version": "1"
     },
     {
-      "title": "Add New Region",
-      "name": "REGION",
+      "title": "Add New Province",
+      "name": "PROVINCE",
+      "fields": [
+        {
+          "name": "Name",
+          "label": "Name:",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "Type",
+          "label": "Type:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "dataview",
+            "query": "['Province','State','County']"
+          }
+        },
+        {
+          "name": "Location",
+          "label": "Location:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Atlas\"').where(p => p.type === \"territory\").file.name"
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Add New Territory",
+      "name": "TERRITORY",
       "fields": [
         {
           "name": "Name",
