@@ -26,7 +26,24 @@
       "actions": [
         {
           "type": "templaterCreateNote",
-          "templateFile": "Assets/Templates/REGION.md",
+          "templateFile": "Assets/Templates/TERRITORY.md",
+          "folderPath": "Compendium/Atlas",
+          "fileName": "temp",
+          "openNote": false
+        }
+      ]
+    },
+    {
+      "label": "+ ADD PROVINCE",
+      "hidden": true,
+      "class": "callButton",
+      "tooltip": "",
+      "id": "province",
+      "style": "default",
+      "actions": [
+        {
+          "type": "templaterCreateNote",
+          "templateFile": "Assets/Templates/PROVINCE.md",
           "folderPath": "Compendium/Atlas",
           "fileName": "temp",
           "openNote": false
