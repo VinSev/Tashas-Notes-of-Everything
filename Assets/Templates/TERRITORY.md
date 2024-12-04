@@ -41,7 +41,7 @@ function getPath(location) {
 // ###########################################################
 
 // Call modal form & declare variables
-const result = await MF.openForm('REGION');
+const result = await MF.openForm('TERRITORY');
 const location = result.Location.value;
 const name = result.Name.value;
 const type = result.Type.value;
@@ -53,18 +53,18 @@ if (result.status === 'ok') {
     // Rename file & open in new tab; Fire toast notification
     await tp.file.move(`Compendium/Atlas/${location ? `${path}/` : ''}${name}/${name}`);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New region <span style="text-decoration: underline;">${name}</span> added`;
+    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New territory <span style="text-decoration: underline;">${name}</span> added`;
 
 } else {
 
-    // Fire toast notifcation & exit templater
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Region has not been added`;
+    // Fire toast notification & exit templater
+    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Territory has not been added`;
     return;
 }
 _%>
 
 ---
-type: region
+type: territory
 locations:
  - <% location ? `"[[${location}]]"` : '' %>
 tags:
@@ -78,7 +78,7 @@ headerLink: "[[<% name %>#<% name %>]]"
 ___
 
 > [!quote|no-t] SUMMARY
->Description of the <% type ? type.toLowerCase() : 'region' %> <% name %>.
+>Description of the <% type ? type.toLowerCase() : 'territory' %> <% name %>.
 
 #### marker
 > [!column|flex 3]
@@ -119,9 +119,9 @@ dv.list(data);
 > 
 >> [!example]- LOCATIONS
 >>```dataview
-LIST WITHOUT ID headerLink
+LIST WITHOUT ID headerlink + " (" + type + ")"
 FROM "Compendium/Atlas/<% location ? `${path}/` : '' %><% name %>"
-WHERE type= "locale"
+WHERE (type= "province" OR type="locale") AND replace(file.path, "/" + file.name + "/" + file.name + ".md", "") = "Compendium/Atlas/<% location ? `${path}/` : '' %><% name %>"
 SORT file.name ASC
 >
 >> [!note]- HISTORY

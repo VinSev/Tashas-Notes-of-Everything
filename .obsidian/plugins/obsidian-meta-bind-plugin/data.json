@@ -17,11 +17,11 @@
   "inputFieldTemplates": [],
   "buttonTemplates": [
     {
-      "label": "+ ADD REGION",
+      "label": "+ ADD TERRITORY",
       "hidden": true,
       "class": "callButton",
       "tooltip": "",
-      "id": "region",
+      "id": "territory",
       "style": "default",
       "actions": [
         {

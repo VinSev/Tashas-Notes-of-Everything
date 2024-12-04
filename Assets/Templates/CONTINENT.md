@@ -109,7 +109,7 @@ dv.list(data);
 >>```dataview
 LIST WITHOUT ID headerLink
 FROM "Compendium/Atlas/<% location ? `${path}/` : '' %><% name %>"
-WHERE type= "region"
+WHERE type= "territory"
 SORT file.name ASC
 >
 >> [!note]- HISTORY
