@@ -65,28 +65,13 @@ if (result.status === 'ok') {
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
     new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New player character <span style="text-decoration: underline;">${name}</span> added`;
 
-    // Refresh the tab because dataview inline doesn't load initially
-    const leaves = this.app.workspace.getLeavesOfType('markdown');
-    for (const leaf of leaves) {
-        if (leaf.view.file.basename === `${name}`) {
-            const tab = app.workspace.getLeafById(leaf.id);
-            const blank = this.app.vault.getAbstractFileByPath('Assets/Templates/REFRESH.md');
-            const file = this.app.vault.getAbstractFileByPath(`Compendium/Party/Player Characters/${name}.md`);
-            setTimeout(async () => {
-                await tab.openFile(blank, { active: false });
-                await tab.openFile(file, { active: false });
-            }, 50);
-        }
-    }
-
-
 } else {
 
     // Fire toast notification & exit templater
     new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Player character has not been added`;
     return;
 }
-_%>
+-%>
 ---
 type: pc
 tags:

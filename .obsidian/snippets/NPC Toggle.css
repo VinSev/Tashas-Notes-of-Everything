@@ -16,7 +16,7 @@ input[type="checkbox"][id="npc"] {
 
 /* edit dropdown style */
 ul li ul.dropdown.npcedit {
-	min-width: 180px;
+	min-width: 165px;
 	display: none;
 	border: 1px solid var(--interactive-accent);
 	padding: 5px;

@@ -1,19 +1,19 @@
 ---
-type: locale
+type: province
 locations:
-- "[[The Sword Coast]]"
+  - "[[The Sword Coast]]"
 tags:
-- location/city
-headerLink: "[[Waterdeep#Waterdeep]]"
+  - location/coalition
+headerLink: "[[Lords Alliance#Lords Alliance]]"
 ---
 
-![[waterdeep.jpg|banner]]
-###### Waterdeep
-<span class="sub2">:FasCity: City</span>
+![[lordsAlliance.jpg|banner]]
+###### Lords Alliance
+<span class="sub2">:LiHandshake: Coalition</span>
 ___
 
 > [!quote|no-t] SUMMARY
->Waterdeep, also known as the City of Splendors or the Crown of the North, is the most important and influential city in the North and perhaps in all of [[Faerûn#Faerûn]]. It is truly marvelous cosmopolitan city of great culture that attracts the most talented artisans, artists, and scholars from across the Realms, as well as a commercial hub for financial interests along the coast and beyond.
+>The Lords' Alliance, also known as the Council of Lords, was a partnership of merchant cities founded in the early 14th century DR. Its members were from the [[The Sword Coast]], the North and Western Heartlands, including [[Waterdeep]], Silverymoon, [[Baldurs Gate]], and Neverwinter, as well as other free cities and towns in the region, which made up the bulk of the organization. It was formed to oppose the growing influence of the Black Network in the North, the Shadow Thieves of Amn, rampaging hordes of orcs, and Northlander raiders.
 
 #### marker
 > [!column|flex 3]
@@ -55,12 +55,13 @@ dv.list(data);
 >> [!example]- LOCATIONS
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Waterdeep"
-WHERE type= "landmark"
+FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance"
+WHERE type= "locale"
 SORT file.name ASC
 >
 >> [!note]- HISTORY
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Session Notes" AND [[Waterdeep]]
+FROM "Session Notes" AND [[Lords' Alliance]]
 SORT file.ctime DESC
+#### marker

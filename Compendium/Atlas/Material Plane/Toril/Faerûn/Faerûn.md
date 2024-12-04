@@ -55,7 +55,7 @@ dv.list(data);
 >>```dataview
 LIST WITHOUT ID headerLink
 FROM "Compendium/Atlas/Material Plane/Toril/Faerûn"
-WHERE type= "region"
+WHERE type= "territory"
 SORT file.name ASC
 >
 >> [!note]- HISTORY

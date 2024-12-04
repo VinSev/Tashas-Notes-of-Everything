@@ -1,25 +1,43 @@
 /* Modal Form changes */
 .modal-form input[type="date"] {
-    min-width: 170px;
-    font-size: 1.1em;
-  }
-  .modal-form select.dropdown {
-    min-width: 170px;
-    font-size: 1em;
-  }
-  .suggestion-container {
-    min-width: 170px;
-  }
-  .modal-close-button {
-    display: none;
-  }
-  .modal-form h1 {
-    text-align: center;
-  }
-  .modal-form .setting-item {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .modal-form .setting-item:nth-child(odd) {
-    background-color: rgba(0, 0, 0, 0.15) !important;
-  }
+	min-width: 170px;
+	font-size: 1.1em;
+}
+.modal-form select.dropdown {
+	min-width: 170px;
+	font-size: 1em;
+}
+.suggestion-container {
+	min-width: 170px;
+}
+.modal-close-button {
+	display: none;
+}
+.modal-form h1 {
+	text-align: center;
+}
+.modal-form .setting-item {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.modal-form .setting-item:nth-child(odd) {
+	background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+h6 .headerTitle input {
+	font-size: var(--h5-size);
+	font-weight: var(--h5-size) !important;
+	color: var(--h6-color);
+	background-color: transparent;
+	padding: 0.5em 0.5em 0.5em 0em;
+	width: 100% !important;
+}
+/* Adjust the input field inside the span */
+.quote input {
+	display: inline-flex;
+	flex: 1;
+}
+/* Adjust the input field inside the span */
+.stats input {
+	width: 94%;
+}

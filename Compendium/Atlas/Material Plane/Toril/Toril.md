@@ -64,19 +64,3 @@ SORT file.name ASC
 LIST WITHOUT ID headerLink
 FROM "Session Notes" AND [[Toril]]
 SORT file.ctime DESC
-
-```dataviewjs
-this.app.workspace.onLayoutReady(() => {
-  console.log("Obsidian is ready");
-  const radio = document.getElementById('direct1');
-  if (radio) {
-    radio.click();
-  }
-});
-
-
-this.app.workspace.on("active-leaf-change", () => {
-    console.log("Active leaf changed!")
-    document.getElementById('direct1').click();
-});
-```

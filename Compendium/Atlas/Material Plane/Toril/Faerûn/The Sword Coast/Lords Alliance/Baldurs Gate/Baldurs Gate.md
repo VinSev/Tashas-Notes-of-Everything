@@ -1,9 +1,9 @@
 ---
 type: locale
 locations:
-- "[[The Sword Coast]]"
+  - "[[Lords Alliance]]"
 tags:
-- location/city
+  - location/city
 headerLink: "[[Baldurs Gate#Baldurs Gate]]"
 ---
 
@@ -54,7 +54,7 @@ dv.list(data);
 >> [!example]- LOCATIONS
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Baldurs Gate"
+FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Baldurs Gate"
 WHERE type= "landmark"
 SORT file.name ASC
 >
