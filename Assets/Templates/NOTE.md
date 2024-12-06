@@ -67,15 +67,15 @@ headerLink: "[[<% name %>#<% title %>|<% name %>]]"
 ___
 
 > [!quote|no-t] SUMMARY
->Recap of the session's events here.
+> Recap of the session's events here.
 
-#### marker
+
 > [!column|flex 3]
->> [!info|felx] NPC'S:
+>> [!info|flex] NPC'S
 >> - [[Characters]] (status)
 >
->> [!example|flex] LOCATIONS:
+>> [!example|flex] LOCATIONS
 >> - [[Locations]] (status)
 >
->> [!important|flex] QUESTS:
+>> [!important|flex] QUESTS
 >> - [[Quests]] (status)

@@ -15,7 +15,7 @@ function toCamelCase(str) {
 // Format tags
 function formatTags(affinity, job, race) {
   return [
-    affinity && ` - affinity/${toCamelCase(affinity)}`,
+    relation && ` - relation/${toCamelCase(relation)}`,
     job && ` - job/${toCamelCase(job)}`,
     race && ` - race/${toCamelCase(race)}`
   ]
@@ -27,7 +27,7 @@ function formatTags(affinity, job, race) {
 function formatSub(location, affinity) {
   return [
     location && `:FasMapLocationDot: [[${location}#${location}]]`,
-    affinity && `:FasHeartPulse: ${affinity}`
+    relation && `:FasHeartPulse: ${relation}`
   ]
   .filter(sub => sub)
   .join('&nbsp;&nbsp;|&nbsp;&nbsp;');
@@ -40,14 +40,14 @@ function formatSub(location, affinity) {
 
 // Call modal form & declare variables
 const result = await MF.openForm('NPC');
-const affinity = result.Affinity.value;
+const relation = result.Relation.value;
 const gender = result.Gender.value;
 const job = result.Job.value;
 const location = result.Location.value;
 const name = result.Name.value;
 const race = result.Race.value;
-const sub = formatSub(location, affinity);
-const tags = formatTags(affinity, job, race);
+const sub = formatSub(location, relation);
+const tags = formatTags(relation, job, race);
 
 if (result.status === 'ok') {
 
@@ -81,16 +81,17 @@ ___
 > ###### Details:
 > | Type | Stat |
 > | ---- | ---- |
-> | :FasBriefcase: Job |  <% job ? job : '' %> |
-> | :FasVenusMars: Gender | <% gender ? gender : '' %> |
 > | :FasUser: Race | <% race ? race : '' %> |
+> | :FasVenusMars: Gender | <% gender ? gender : '' %> |
+> | :FasBriefcase: Job |  <% job ? job : '' %> |
 <span class="clearfix"></span>
 
 > [!quote|no-t]
->Profile of <% name %>, the <% `${gender ? gender.toLowerCase() : ''}${race ? (gender ? ' ' : '') + race.toLowerCase() : ''}` %> NPC.
-#### marker
+> Profile of <% name %>, the <% `${gender ? gender.toLowerCase() : ''}${race ? (gender ? ' ' : '') + race : ''}` %> NPC.
+
+
 > [!column|flex 3]
->> [!important]- QUESTS:
+>> [!important]- QUESTS
 >>```dataview
 >>LIST WITHOUT ID headerLink
 >>FROM "Compendium/Party/Quests" AND [[<% name %>]]

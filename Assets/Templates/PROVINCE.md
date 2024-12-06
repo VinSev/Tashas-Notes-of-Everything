@@ -77,9 +77,9 @@ headerLink: "[[<% name %>#<% name %>]]"
 ___
 
 > [!quote|no-t] SUMMARY
->Description of the <% type ? type.toLowerCase() : 'province' %> <% name %>.
+> Description of the <% type ? type.toLowerCase() : 'province' %> <% name %>.
 
-#### marker
+
 > [!column|flex 3]
 > > [!hint]-  NPC's
 > > <input type="checkbox" id="npc"/><ul class="sortMenu"><li class="sortIcon">:RiListSettingsLine:<ul class="dropdown npcedit"><li><label for="npc" class="directLabel active">Direct Links Only</label></li><li><label for="npc" class="childLabel">Include Sub-Locations</label></li></ul></li></ul>

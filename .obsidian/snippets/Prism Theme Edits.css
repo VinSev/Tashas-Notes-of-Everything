@@ -95,14 +95,18 @@ h4 {
 .tree-item-self:hover svg {
 	color: unset !important;
 }
-.goldcoin svg {
-	color: #efe03a !important;
+
+.platinumcoin svg {
+	color: #e5e4e2 !important;
 }
-.silvercoin svg {
-	color: #dbdbdb !important;
+.goldcoin svg {
+	color: #ffd700 !important;
+}
+.silvercoin  svg {
+	color: #c0c0c0 !important;
 }
 .coppercoin svg {
-	color: #bb9300 !important;
+	color: #b87333 !important;
 }
 
 /* Left Sidebar Image */

@@ -38,9 +38,9 @@ headerLink: "[[<% name %>#<% name %>]]"
 ___
 
 > [!quote|no-t]
->![[embed.jpg|right wm-sm]]Profile of <% name %>, the <% alignment ? alignment.toLowerCase() : 'unknown' %> aligned organization.
+> ![[embed.jpg|right wm-sm]]Profile of <% name %>, the <% alignment ? alignment.toLowerCase() : 'unknown' %> aligned organization.
 
-#### marker
+
 > [!column|flex 3]
 >>[!hint]- NPC's
 >>```dataview

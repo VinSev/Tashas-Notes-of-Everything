@@ -15,10 +15,13 @@ function toCamelCase(str) {
 // Return icon based on type
 function getIcon(type) {
     const iconMappings = {
+	'Armor': ':FasVest:',
+	'Jewelry': ':FasGem:',
+	'Weapon': ':RiSwordFill:',
         'Magic Item': ':FasWandMagicSparkles:',
         'Religious Artifact': ':FasCross:',
-        'Quest Item': ':fas_scroll:',
-        Treasure: ':RiVipDiamondFill:'
+        'Quest Item': ':FasScroll:',
+        'Treasure': ':FasGem:'
     };
 
     return iconMappings[type] || ':FasCircleQuestion:';
@@ -61,11 +64,10 @@ headerLink: "[[<% name %>#<% name %>]]"
 ___
 
 > [!quote|no-t]
->![[embed.jpg|right wm-sm]]Description of the  <% type ? type.toLowerCase() : 'object' %>, <% name %>.
+> ![[embed.jpg|right wm-sm]]Description of the  <% type ? type.toLowerCase() : 'object' %>, <% name %>.
 <span class="clearfix"></span>
 
-#### marker
-#### marker
+
 > [!column|flex 3]
 >>[!hint]- NPC's
 >>```dataview

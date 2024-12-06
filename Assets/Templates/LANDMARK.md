@@ -15,18 +15,68 @@ function toCamelCase(str) {
 // Return icon based on type
 function getIcon(type) {
   const iconMappings = {
+    Academy: ':FasSchool:',
+    Alchemist: ':FasLeaf:',
+    Apothecary: ':FasFlaskVial:',
+    Arena: ':RiSwordFill:',
+    Armory: ':FasHammer:',
+    Bank: ':RiBankFill:',
+    Barracks: ':LiCastle:',
+    Bathhouse: ':FasBath:',
+    Bazaar: ':FasCartShopping:',
     Blacksmith: ':FasHammer:',
+    Bookstore: ':FasBook:',
+    Brothel: ':FasVenusMars:',
+    Butcher: ':bone',
     Camp: ':FasCampground:',
+    Carpenter: ':FasHammer:',
+    Cartographer: ':FasMap:',
+    Castle: ':LiCastle:',
+    Cemetery: ':FasGhost:',
+    Chapel: ':FasChurch:',
+    Church: ':FasChurch:',
+    Cobbler: ':FasShoePrints:',
+    Coliseum: ':RiSwordFill:',
+    Cooperage: ':FasBucket:',
+    Courier: ':RiMailFill:',
+    Court: ':FasHammer:',
+    Dockhouse: ':FasSailboat:',
+    Dyer: ':FasShirt:',
+    Embassy: ':FasSchoolFlag:',
+    Exorcist: ':FasGhost:',
+    Fletcher: ':RiFlowerFill:',
+    Gallow: ':RiCriminalFill:',
+    Garden: ':RiFlowerFill:',
+    Garrison: ':RiSwordFill:',
+    Gatehouse: ':FasHouseLock:',
     Guildhall: ':FasShield:',
+    Herbalist: ':FasLeaf:',
+    Hospital: ':FasHospital:',
     Inn: ':FasBed:',
+    Jail: ':RiCriminalFill:',
+    Jeweler: ':FasGem:',
     Library: ':FasBookOpen:',
+    Locksmith: ':FasLock:',
     Market: ':FasScaleUnbalanced:',
+    Monastery: ':FasChurch:',
+    Morgue: ':FasSkull:',
+    Orphanage: ':FasChild:',
+    Plaza: ':FasHandshakeSimple:',
     Port: ':FasSailboat:',
+    Potter: ':FasHammer:',
+    Brewery: ':RiDrinksFill:',
     Residence: ':FasHouse:',
-    Shop: ':FasCartShopping:',
-    Stable: ':FasHorseHead::',
-    Tavern: ':RiBeerLine:',
+    Shrine: ':FasChurch:',
+    Stable: ':FasHorseHead:',
+    Store: ':FasCartShopping:',
+    Stonemason: ':FasHammer:',
+    Tailor: ':FasShirt:',
+    Tavern: ':RiBeerFill:',
     Temple: ':FasChurch:',
+    Theater: ':FasMasksTheater:',
+    Tower: ':FasTowerObservation:',
+    Warehouse: ':FasWarehouse:',
+    Well: ':FasBucket:'
   };
 
   return iconMappings[type] || ':FasCircleQuestion:';
@@ -86,18 +136,19 @@ headerLink: "[[<% name %>#<% name %>]]"
 ___
 
 > [!quote|no-t] SUMMARY
->Description of the <% type ? type.toLowerCase() : 'landmark' %> <% name %>.
+> Description of the <% type ? type.toLowerCase() : 'landmark' %> <% name %>.
 
 #### marker
 | INVENTORY                  | PRICE |
 | -------------------------- | ----- |
-| Item 1 | 80 <span class="goldcoin">:RiCoinsFill:</span>  |
-| Item 2 | 20 <span class="silvercoin">:RiCoinsFill:</span>   |
-| Item 3 | 100 <span class="coppercoin">:RiCoinsFill:</span>  |
+| Item 1 | 5 <span class="platinumcoin">:RiCoinsFill:</span>  |
+| Item 2 | 80 <span class="goldcoin">:RiCoinsFill:</span>  |
+| Item 3 | 20 <span class="silvercoin">:RiCoinsFill:</span>   |
+| Item 4 | 100 <span class="coppercoin">:RiCoinsFill:</span>  |
 
 <span class="clearfix"></span>
 
-#### marker
+
 > [!column|flex 3]
 > > [!hint]-  NPC's
 > >```dataview

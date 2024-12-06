@@ -95,7 +95,7 @@
         {
           "type": "templaterCreateNote",
           "templateFile": "Assets/Templates/PLANE.md",
-          "folderPath": "/",
+          "folderPath": "Compendium/Atlas",
           "fileName": "temp",
           "openNote": false
         }
@@ -163,7 +163,7 @@
         {
           "type": "templaterCreateNote",
           "templateFile": "Assets/Templates/LOCALE.md",
-          "folderPath": "/",
+          "folderPath": "Compendium/Atlas",
           "fileName": "temp",
           "openNote": false
         }
@@ -180,7 +180,7 @@
         {
           "type": "templaterCreateNote",
           "templateFile": "Assets/Templates/LANDMARK.md",
-          "folderPath": "/",
+          "folderPath": "Compendium/Atlas",
           "fileName": "temp",
           "openNote": false
         }
@@ -196,7 +196,7 @@
       "actions": [
         {
           "type": "templaterCreateNote",
-          "templateFile": "Assets/Templates/GOD.md",
+          "templateFile": "Assets/Templates/DEITY.md",
           "folderPath": "Compendium/Lore/Deities",
           "fileName": "temp",
           "openNote": false
@@ -249,7 +249,7 @@
         {
           "type": "templaterCreateNote",
           "templateFile": "Assets/Templates/CONTINENT.md",
-          "folderPath": "/",
+          "folderPath": "Compendium/Atlas",
           "fileName": "temp",
           "openNote": false
         }

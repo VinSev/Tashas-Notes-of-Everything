@@ -17,12 +17,13 @@ function toCamelCase(str) {
 // ###########################################################
 
 // Call modal form & declare variables
-const result = await MF.openForm('GOD');
+const result = await MF.openForm('DEITY');
 const alignment = result.Alignment.value;
 const name = result.Name.value;
 const gender = result.Gender.value;
 const domains = result.Domains.value;
 const pantheon = result.Pantheon.value;
+const rank = result.Rank.value;
 const tags = domains ? domains.map(value => `- domain/${toCamelCase(value)}`).join("\n") : '-';
 
 if (result.status === 'ok') {
@@ -56,14 +57,15 @@ ___
 > ###### Details:
 > | Type | Stat |
 > | ---- | ---- |
+> | :FasCrown: Divine Rank | <% rank ? rank : '' %> |
+> | :FasBuildingColumns: Pantheon | <% pantheon ? pantheon : '' %> |
 > | :FasBoltLightning: Domains | <% domains ? domains.join(', ') : '' %> |
 > | :FasVenusMars: Gender | <% gender ? gender : '' %> |
-> | :FasBuildingColumns: Pantheon | <% pantheon ? pantheon : '' %> |
 
 > [!quote|no-t]
->Profile of <% name %>, the <% alignment ? alignment.toLowerCase() : '' %> <% gender ? gender.toLowerCase() : '' %> deity.
+> Profile of <% name %>, the <% alignment ? alignment.toLowerCase() : '' %> <% rank ? rank.toLowerCase() : '' %>.
 
-#### marker
+
 > [!column|flex 3]
 >> [!hint]-  NPC's
 >>```dataview

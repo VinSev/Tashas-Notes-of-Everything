@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "c530face6c21a68a",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "dccbfdd4834940cf",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "72e4690ce8dd3366",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,7 +34,7 @@
       {
         "id": "b0963ff0c5da124c",
         "type": "tabs",
-        "dimension": 24.759080800593033,
+        "dimension": 25,
         "children": [
           {
             "id": "a58c95d8f0002a0b",
@@ -53,7 +53,7 @@
       {
         "id": "ec977c9092a10bf2",
         "type": "tabs",
-        "dimension": 75.24091919940697,
+        "dimension": 75,
         "children": [
           {
             "id": "e493bc2564fcbecb",
@@ -71,7 +71,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 346.5
+    "width": 350
   },
   "right": {
     "id": "cbcc3a597fb0833b",
@@ -80,7 +80,7 @@
       {
         "id": "36fb3699cc5e9295",
         "type": "tabs",
-        "dimension": 23.77873563218391,
+        "dimension": 25,
         "children": [
           {
             "id": "34783b92fcf002b0",
@@ -97,7 +97,7 @@
       {
         "id": "1f6fc3dcaa6b4b26",
         "type": "tabs",
-        "dimension": 76.22126436781609,
+        "dimension": 75,
         "children": [
           {
             "id": "37992ec5383e3e3d",
@@ -152,54 +152,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "modalforms:Edit forms": false,
-      "templater-obsidian:Templater": false,
+      "homepage:Open homepage": false,
       "graph:Open graph view": false,
-      "command-palette:Open command palette": false
+      "callout-manager:Insert Callout": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": true,
+      "modalforms:Edit forms": true
     }
   },
-  "active": "72e4690ce8dd3366",
+  "active": "e493bc2564fcbecb",
   "lastOpenFiles": [
-    "Assets/Templates/PLAYER.md",
-    "INDEX.md",
-    "Compendium/Atlas/Feywild/Feywild.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Lords Alliance.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/The Sword Coast.md",
-    "README.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Teri Test 1/Prov Test 2/Lacal Test 3/Land Test 4/Land Test 4.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Teri Test 1/Prov Test 2/Lacal Test 3/Lacal Test 3.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Teri Test 1/Prov Test 2/Prov Test 2.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Teri Test 1/Teri Test 1.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Teri Test 1/Prov Test 2/Lacal Test 3/Land Test 4",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Teri Test 1/Prov Test 2/Lacal Test 3",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Teri Test 1/Prov Test 2",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Teri Test 1",
-    "Assets/Templates/TERRITORY.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Baldurs Gate/Baldurs Gate.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Waterdeep/Waterdeep.md",
-    "Assets/Templates/PROVINCE.md",
-    "Assets/Templates/!TEST.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Waterdeep/City of the Dead.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Baldurs Gate/Sorcerous Sundries.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Baldurs Gate/Elfsong Tavern.md",
-    "Assets/Images/Location/lordsAlliance.jpg",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/Faerûn.md",
-    "Assets/Templates/STARTUP.md",
-    "Compendium/Party/Player Characters/Alaric Waycrest.md",
-    "Session Notes/Session 02 (2024-02-17).md",
-    "Compendium/NPC's/Eleidin Verlice.md",
-    "Untitled.md",
-    "Assets/Templates/CONTINENT.md",
-    "Compendium/Party/Quests/what did this do.md",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Waterdeep/dwarf statue",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/fixed",
-    "Compendium/Atlas/broken 2",
-    "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/broken",
-    "Assets/Images/header.png"
   ]
 }

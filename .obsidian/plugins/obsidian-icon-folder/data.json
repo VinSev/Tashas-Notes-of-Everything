@@ -6,7 +6,7 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FasHandshake"
+      "FasHouse"
     ],
     "recentlyUsedIconsSize": 1,
     "rules": [],
@@ -17,7 +17,7 @@
       "left": 0
     },
     "iconInTabsEnabled": false,
-    "iconInTitleEnabled": true,
+    "iconInTitleEnabled": false,
     "iconInFrontmatterEnabled": false,
     "iconInFrontmatterFieldName": "icon",
     "iconColorInFrontmatterFieldName": "iconColor",
@@ -30,8 +30,8 @@
     "lucideIconPackType": "native",
     "useInternalPlugins": false
   },
-  "Compendium": "FasFolder",
-  "Assets": "FasFolder",
+  "Compendium": "FasBookOpen",
+  "Assets": "FasPaperclip",
   "Assets/Images": "FasImagePortrait",
   "Assets/PDF": "FasFilePdf",
   "Assets/Templates": "FasNoteSticky",
@@ -40,7 +40,7 @@
   "Compendium/Lore": "FasChalkboard",
   "Compendium/NPC's": "FasUsers",
   "Compendium/Party": "FasAddressBook",
-  "Session Notes": "FasFolder",
+  "Session Notes": "FasNoteSticky",
   "Compendium/Atlas/Material Plane": "FasCircleHalfStroke",
   "Compendium/Atlas/Material Plane/Toril": "FasGlobe",
   "Compendium/Atlas/Material Plane/Toril/Faerûn": "FasEarthAmericas",
@@ -54,5 +54,7 @@
   "Compendium/Party/Quests": "FasCircleExclamation",
   "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Baldurs Gate": "FasCity",
   "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Waterdeep": "FasCity",
-  "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance": "FasHandshake"
+  "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance": "FasHandshake",
+  "Assets/Documents": "FasFile",
+  "INDEX.md": "FasHouse"
 }

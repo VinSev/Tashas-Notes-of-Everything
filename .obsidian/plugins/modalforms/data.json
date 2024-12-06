@@ -19,43 +19,33 @@
           }
         },
         {
-          "name": "Gender",
-          "label": "Gender:",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "dataview",
-            "query": "['Male', 'Female', 'Non-Binary']"
-          }
-        },
-        {
           "name": "Race",
           "label": "Race:",
           "description": "",
           "isRequired": false,
           "input": {
             "type": "dataview",
-            "query": "['Aarakocra','Aasimar','Bugbear','Centaur','Changeling','Dragonborn','Dwarf','Elf','Fairy','Firbolg','Genasi','Gnome','Goblin','Goliath','Grung','Halfling','Half-Elf','Half-Orc','Hobgoblin','Human','Kalashtar','Kenku','Kobold','Leonin','Lizardfolk','Loxodon','Minotaur','Orc','Owlfolk','Satyr','Shifter','Simic Hybrid','Tabaxi','Tiefling','Tortle','Triton','Vedalken','Verdan','Warforged','Yuan-Ti Pureblood']"
+            "query": "['Aarakocra','Aasimar','Protector Aasimar','Scourge Aasimar','Fallen Aasimar','Bugbear','Centaur','Changeling','Dragonborn','Chromatic Dragonborn','Black Dragonborn','Blue Dragonborn','Green Dragonborn','Red Dragonborn','White Dragonborn','Metallic Dragonborn','Brass Dragonborn','Bronze Dragonborn','Copper Dragonborn','Gold Dragonborn','Silver Dragonborn','Gem Dragonborn','Amethyst Dragonborn','Crystal Dragonborn','Emerald Dragonborn','Sapphire Dragonborn','Topaz Dragonborn','Dwarf','Hill Dwarf','Mountain Dwarf','Duergar','Elf','Astral Elf','Drow','Eladrin','High Elf','Wood Elf','Pallid Elf','Sea Elf','Shadar-Kai','Fairy','Firbolg','Genasi','Air Genasi','Earth Genasi','Fire Genasi','Water Genasi','Giff','Gith','Githyanki','Githzerai','Gnome','Autognome','Forest Gnome','Rock Gnome','Deep Gnome','Goblin','Goliath','Cloud Goliath','Fire Goliath','Frost Goliath','Hill Goliath','Stone Goliath','Storm Goliath','Grung','Hadozee','Halfling','Lightfoot Halfing','Stout Halfling','Ghostwise Halfling','Lotusden Halfling','Half-Elf','Half-Drow','High Half-Elf','Wood Half-Elf','Aquatic Half-Elf','Half-Orc','Harengon','Hobgoblin','Human','Variant Human','Kalashtar','Kender','Kenku','Kobold','Leonin','Lizardfolk','Locathah','Loxodon','Minotaur','Orc','Owlin','Plasmoid','Satyr','Shifter','Beasthide Shifter','Longtooth Shifter','Swiftstride Shifter','Wildhunt Shifter','Simic Hybrid','Tabaxi','Thri-kreen','Tiefling','Abyssal Tiefling','Asmodeus Tiefling','Baalzebul Tiefling','Chthonic Tiefling','Dispater Tiefling','Fierna Tiefling','Glasya Tiefling','Levistus Tiefling','Mammon Tiefling','Mephistopheles Tiefling','Infernal Tiefling','Zariel Tiefling','Tortle','Triton','Vedalken','Verdan','Warforged','Yuan-Ti']"
           }
         },
         {
-          "name": "Affinity",
-          "label": "Affinity:",
+          "name": "Gender",
+          "label": "Gender:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "dataview",
+            "query": "['Male','Female','Agender','Non-Binary']"
+          }
+        },
+        {
+          "name": "Relation",
+          "label": "Relation:",
           "description": "",
           "isRequired": false,
           "input": {
             "type": "dataview",
             "query": "['Friendly','Hostile','Neutral','Unknown']"
-          }
-        },
-        {
-          "name": "Job",
-          "label": "Job:",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "dataview",
-            "query": "['Bartender','Blacksmith','Chef','Cleric','Farmer','Guard','Innkeeper','Merchant','Miner','Noble','Priest','Scholar','Scribe','Performer','Thief','Town Crier','Trapper']"
           }
         },
         {
@@ -66,6 +56,16 @@
           "input": {
             "type": "dataview",
             "query": "dv.pages('\"Compendium/Atlas\"').file.name"
+          }
+        },
+        {
+          "name": "Job",
+          "label": "Job:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "dataview",
+            "query": "['Bartender','Blacksmith','Chef','Cleric','Farmer','Guard','Innkeeper','Merchant','Miner','Noble','Priest','Scholar','Scribe','Performer','Thief','Town Crier','Trapper']"
           }
         }
       ],
@@ -152,7 +152,7 @@
     },
     {
       "title": "Add New Deity",
-      "name": "GOD",
+      "name": "DEITY",
       "fields": [
         {
           "name": "Name",
@@ -165,16 +165,6 @@
           }
         },
         {
-          "name": "Gender",
-          "label": "Gender:",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "dataview",
-            "query": "['Male','Female','Agender','Non-Binary']"
-          }
-        },
-        {
           "name": "Alignment",
           "label": "Alignment:",
           "description": "",
@@ -182,6 +172,32 @@
           "input": {
             "type": "dataview",
             "query": "['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil']"
+          }
+        },
+        {
+          "name": "Rank",
+          "label": "Rank:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "dataview",
+            "query": "['Overdeity','Greater Deity','Intermediate Deity','Lesser Deity','Titan','Demigod','Vestige']"
+          }
+        },
+        {
+          "name": "Pantheon",
+          "label": "Pantheon:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Faerûnian",
+              "Netherese",
+              "Olympian"
+            ],
+            "allowUnknownValues": true
           }
         },
         {
@@ -262,19 +278,13 @@
           }
         },
         {
-          "name": "Pantheon",
-          "label": "Pantheon:",
+          "name": "Gender",
+          "label": "Gender:",
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Faerûnian",
-              "Netherese",
-              "Olympian"
-            ],
-            "allowUnknownValues": true
+            "type": "dataview",
+            "query": "['Male','Female','Agender','Non-Binary']"
           }
         }
       ],
@@ -301,7 +311,7 @@
           "isRequired": false,
           "input": {
             "type": "dataview",
-            "query": "['Blacksmith','Camp','Guildhall','Inn','Library','Market','Port','Residence','Tavern']"
+            "query": "['Academy','Alchemist','Apothecary','Arena','Armory','Bank','Barracks','Bathhouse','Bazaar','Blacksmith','Bookstore','Brothel','Butcher','Camp','Carpenter','Cartographer','Castle','Cemetery','Chapel','Church','Cobbler','Coliseum','Cooperage','Courier','Court','Dockhouse','Dyer','Embassy','Exorcist','Fletcher','Gallow','Garden','Garrison','Gatehouse','Guildhall','Herbalist','Hospital','Inn','Jail','Jeweler','Library','Locksmith','Market','Monastery','Morgue','Orphanage','Plaza','Port','Potter','Brewery','Residence','Shrine','Stable','Store','Stonemason','Tailor','Tavern','Temple','Theater','Tower','Warehouse','Well']"
           }
         },
         {
@@ -666,7 +676,17 @@
           "isRequired": false,
           "input": {
             "type": "dataview",
-            "query": "['Aarakocra','Aasimar','Bugbear','Centaur','Changeling','Dragonborn','Dwarf','Elf','Fairy','Firbolg','Genasi','Gnome','Goblin','Goliath','Grung','Halfling','Half-Elf','Half-Orc','Hobgoblin','Human','Kalashtar','Kenku','Kobold','Leonin','Lizardfolk','Loxodon','Minotaur','Orc','Owlfolk','Satyr','Shifter','Simic Hybrid','Tabaxi','Tiefling','Tortle','Triton','Vedalken','Verdan','Warforged','Yuan-Ti Pureblood']"
+            "query": "['Aarakocra','Aasimar','Protector Aasimar','Scourge Aasimar','Fallen Aasimar','Bugbear','Centaur','Changeling','Dragonborn','Chromatic Dragonborn','Black Dragonborn','Blue Dragonborn','Green Dragonborn','Red Dragonborn','White Dragonborn','Metallic Dragonborn','Brass Dragonborn','Bronze Dragonborn','Copper Dragonborn','Gold Dragonborn','Silver Dragonborn','Gem Dragonborn','Amethyst Dragonborn','Crystal Dragonborn','Emerald Dragonborn','Sapphire Dragonborn','Topaz Dragonborn','Dwarf','Hill Dwarf','Mountain Dwarf','Duergar','Elf','Astral Elf','Drow','Eladrin','High Elf','Wood Elf','Pallid Elf','Sea Elf','Shadar-Kai','Fairy','Firbolg','Genasi','Air Genasi','Earth Genasi','Fire Genasi','Water Genasi','Giff','Gith','Githyanki','Githzerai','Gnome','Autognome','Forest Gnome','Rock Gnome','Deep Gnome','Goblin','Goliath','Cloud Goliath','Fire Goliath','Frost Goliath','Hill Goliath','Stone Goliath','Storm Goliath','Grung','Hadozee','Halfling','Lightfoot Halfing','Stout Halfling','Ghostwise Halfling','Lotusden Halfling','Half-Elf','Half-Drow','High Half-Elf','Wood Half-Elf','Aquatic Half-Elf','Half-Orc','Harengon','Hobgoblin','Human','Variant Human','Kalashtar','Kender','Kenku','Kobold','Leonin','Lizardfolk','Locathah','Loxodon','Minotaur','Orc','Owlin','Plasmoid','Satyr','Shifter','Beasthide Shifter','Longtooth Shifter','Swiftstride Shifter','Wildhunt Shifter','Simic Hybrid','Tabaxi','Thri-kreen','Tiefling','Abyssal Tiefling','Asmodeus Tiefling','Baalzebul Tiefling','Chthonic Tiefling','Dispater Tiefling','Fierna Tiefling','Glasya Tiefling','Levistus Tiefling','Mammon Tiefling','Mephistopheles Tiefling','Infernal Tiefling','Zariel Tiefling','Tortle','Triton','Vedalken','Verdan','Warforged','Yuan-Ti']"
+          }
+        },
+        {
+          "name": "Gender",
+          "label": "Gender:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "dataview",
+            "query": "['Male','Female','Agender','Non-Binary']"
           }
         },
         {
@@ -696,7 +716,7 @@
           "isRequired": false,
           "input": {
             "type": "dataview",
-            "query": "['Ancestral Guardian', 'Battlerager', 'Berserker', 'Storm Herald', 'Totem Warrior', 'Zealot', 'College of Creation', 'College of Eloquence', 'College of Glamour', 'College of Lore', 'College of Swords', 'College of Valor', 'College of Whispers', 'Arcana Domain', 'Death Domain', 'Forge Domain', 'Grave Domain', 'Knowledge Domain', 'Life Domain', 'Light Domain', 'Nature Domain', 'Order Domain', 'Peace Domain', 'Tempest Domain', 'Trickery Domain', 'Twilight Domain', 'War Domain', 'Circle of Dreams', 'Circle of Spores', 'Circle of Stars', 'Circle of the Land', 'Circle of the Moon', 'Circle of the Shepherd', 'Circle of Wildfire', 'Arcane Archer', 'Battle Master', 'Cavalier', 'Champion', 'Echo Knight', 'Eldritch Knight', 'Psi Warrior', 'Purple Dragon Knight', 'Rune Knight', 'Samurai', 'Drunken Master', 'Four Elements', 'Kensei', 'Long Death', 'Mercy', 'Open Hand', 'Shadow', 'Sun Soul', 'Ancients', 'Conquest', 'Crown', 'Devotion', 'Glory', 'Oathbreaker', 'Redemption', 'Vengeance', 'Watchers', 'Beast Master', 'Fey Wanderer', 'Gloom Stalker', 'Horizon Walker', 'Hunter', 'Monster Slayer', 'Swarmkeeper', 'Arcane Trickster', 'Assassin', 'Inquisitive', 'Mastermind', 'Phantom', 'Scout', 'Soulknife', 'Swashbuckler', 'Thief', 'Aberrant Mind', 'Clockwork Soul', 'Divine Soul', 'Draconic Bloodline', 'Shadow Magic', 'Storm Sorcery', 'Wild Magic', 'Archfey', 'Celestial', 'Fathomless', 'Fiend', 'Genie', 'Great Old One', 'Hexblade', 'Undead', 'Undying', 'Bladesinging', 'Chronurgy', 'Graviturgy', 'Lore Mastery', 'Order of Scribes', 'School of Abjuration', 'School of Conjuration', 'School of Divination', 'School of Enchantment', 'School of Evocation', 'School of Illusion', 'School of Necromancy', 'School of Transmutation', 'War Magic', 'Alchemist', 'Armorer', 'Artillerist', 'Battle Smith']"
+            "query": "['Ancestral Guardian', 'Battlerager', 'Berserker', 'Beast', 'Storm Herald', 'Totem Warrior', 'Wild Heart', 'Word Tree', 'Zealot', 'Creation', 'Eloquence', 'Glamour', 'Lore', 'Spirits', 'Swords', 'Valor', 'Whispers', 'Arcana', 'Death', 'Forge', 'Grave', 'Knowledge', 'Life', 'Light', 'Nature', 'Order', 'Peace', 'Tempest', 'Trickery', 'Twilight', 'War', 'Dreams', 'Land', 'Moon', 'Sea', 'Shepherd', 'Spores', 'Stars', 'Wildfire', 'Arcane Archer', 'Battle Master', 'Cavalier', 'Champion', 'Echo Knight', 'Eldritch Knight', 'Psi Warrior', 'Rune Knight', 'Samurai', 'Ascended Dragon', 'Drunken Master', 'Elements', 'Four Elements', 'Kensei', 'Long Death', 'Mercy', 'Open Hand', 'Shadow', 'Sun Soul', 'Ancients', 'Conquest', 'Crown', 'Devotion', 'Glory', 'Oathbreaker', 'Redemption', 'Vengeance', 'Watchers', 'Beast Master', 'Drakewarden', 'Fey Wanderer', 'Gloom Stalker', 'Horizon Walker', 'Hunter', 'Monster Slayer', 'Swarmkeeper', 'Arcane Trickster', 'Assassin', 'Inquisitive', 'Mastermind', 'Phantom', 'Scout', 'Soulknife', 'Swashbuckler', 'Thief', 'Aberrant Mind', 'Clockwork Soul', 'Divine Soul', 'Draconic Bloodline', 'Shadow Magic', 'Storm Sorcery', 'Wild Magic', 'Archfey', 'Celestial', 'Fathomless', 'Fiend', 'Genie', 'Great Old One', 'Hexblade', 'Undead', 'Undying', 'Bladesinging', 'Chronurgy', 'Graviturgy', 'Order of Scribes', 'Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation', 'War Magic', 'Alchemist', 'Armorer', 'Artillerist', 'Battle Smith']"
           }
         },
         {

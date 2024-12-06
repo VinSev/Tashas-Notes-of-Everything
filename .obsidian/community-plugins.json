@@ -1,5 +1,4 @@
 [
-  "quickadd",
   "obsidian-style-settings",
   "dataview",
   "folder-notes",
@@ -8,5 +7,7 @@
   "obsidian-meta-bind-plugin",
   "modalforms",
   "obsidian-sortable",
-  "templater-obsidian"
+  "templater-obsidian",
+  "callout-manager",
+  "homepage"
 ]

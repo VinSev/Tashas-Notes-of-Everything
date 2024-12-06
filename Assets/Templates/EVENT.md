@@ -18,10 +18,10 @@ function getIcon(type) {
 		Personal: ':FasCalendarDays:',
 		Political: ':FasBullhorn:',
 		Religious: ':FasCross:',
-		Seasonal: ':RiSunFoggyFill',
+		Seasonal: ':RiSunFoggyFill:',
 	};
 
-	return iconMappings[type] || ':FasCircleQuestion::';
+	return iconMappings[type] || ':FasCircleQuestion:';
 }
 
 // ###########################################################
@@ -61,10 +61,10 @@ headerLink: "[[<% name %>#<% name %>]]"
 ___
 
 > [!quote|no-t]
->![[embed.jpg|right wm-sm]]Description of the <% type ? type.toLowerCase() + ' event' : 'event' %>, <% name %>.
+> ![[embed.jpg|right wm-sm]]Description of the <% type ? type.toLowerCase() + ' event' : 'event' %>, <% name %>.
 <span class="clearfix"></span>
 
-#### marker
+
 > [!column|flex 3]
 >>[!hint]- NPC's
 >>```dataview

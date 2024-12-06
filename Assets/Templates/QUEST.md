@@ -55,10 +55,20 @@ headerLink: "[[<% name %>#<% name %>]]"
 <span class="sub2"><% sub ? sub : '' %></span>
 ___
 
-> [!quote|no-t]
->![[quest.png|right wm-sm]]Quest description here...
+> [!infobox|no-t right]
+> ![[quest.png]]
+> ###### Rewards:
+> | Type | Amount |
+> | ---- | ---- |
+> | <span class="coppercoin">:RiCoinsFill:</span> | 0 |
+> | <span class="silvercoin">:RiCoinsFill:</span> | 0 |
+> | <span class="goldcoin">:RiCoinsFill:</span> | 0 |
+> | <span class="platinumcoin">:RiCoinsFill:</span> | 0 |
 
-#### marker
+> [!quote|no-t]
+> Quest description here... (Objective, Deadline, Clues)
+
+
 > [!column|flex 3]
 >>[!note]- HISTORY
 >>```dataview

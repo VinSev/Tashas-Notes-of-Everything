@@ -37,7 +37,7 @@ function getIcon(pClass) {
     Rogue: ':RiSwordFill: Archetype',
     Sorcerer: ':FasHandSparkles: Origin',
     Warlock: ':FasBurst: Patron',
-    Wizard: ':FasWandMagicSparkles: Tradition'
+    Wizard: ':FasWandMagicSparkles: School'
   };
 
   return iconMappings[pClass] || ':FasCircleQuestion: Sub Class';
@@ -55,6 +55,7 @@ const pClass = result.pClass.value;
 const subClass = result.subClass.value;
 const subType = getIcon(pClass);
 const name = result.Name.value;
+const gender = result.Gender.value;
 const race = result.Race.value;
 const tags = formatTags(pClass, race);
 
@@ -95,14 +96,14 @@ ___
 > | :FasCrown: Level   | `=this.level` |
 > | :RiSwordFill: Class |  `=this.class`|
 > | <% subType %> |  `=this.subClass`|
-> |  :FasUserGroup: Race |  `=this.race`|
+> |  :FasUserGroup: Race |  `=this.race`
+> | :FasVenusMars: Gender | <% gender ? gender : '' %> |
 
 > [!quote|no-t]
 > Character description here
- 
-#### marker
+
 > [!column|flex 3]
->> [!info]- STORYLINES:
+>> [!info]- STORYLINES
 >>```dataview
 >>LIST WITHOUT ID headerLink
 >>FROM "Compendium/Party/Quests" AND [[<% name %>]]
