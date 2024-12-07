@@ -26,6 +26,10 @@ _%>
 
 ---
 type: organization
+relationships: 
+- target: "[[]]" 
+  type: ""
+  
 locations:
  - <% location ? `"[[${location}]]"` : '' %>
 tags:
@@ -42,6 +46,23 @@ ___
 
 
 > [!column|flex 3]
+>>[!tldr]- RELATIONSHIPS
+>>```dataviewjs
+>>const results = dv.pages('"Compendium/Lore/Organizations"')
+>>    .where(p => p.relationships && p.relationships.some(r => 
+>>        r.target.path === "Compendium/Lore/Organizations/<% name %>.md"));
+>>
+>>for (let result of results) {
+>>    if (result.file.path !== "Compendium/Lore/Organizations/<% name %>.md") {
+>>        let relationships = result.relationships.filter(r => 
+>>            r.target.path === "Compendium/Lore/Organizations/<% name %>.md");
+>>
+>>        relationships.forEach(relationship => {
+>>            dv.list([`[[${result.file.name}]] (${relationship.type})`]);
+>>        });
+>>    }
+>>}
+>
 >>[!hint]- NPC's
 >>```dataview
 >>LIST WITHOUT ID headerLink

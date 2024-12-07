@@ -15,7 +15,7 @@ function toCamelCase(str) {
 // Format tags
 function formatTags(affinity, job, race) {
   return [
-    relation && ` - relation/${toCamelCase(relation)}`,
+    affinity && ` - affinity/${toCamelCase(affinity)}`,
     job && ` - job/${toCamelCase(job)}`,
     race && ` - race/${toCamelCase(race)}`
   ]
@@ -27,7 +27,7 @@ function formatTags(affinity, job, race) {
 function formatSub(location, affinity) {
   return [
     location && `:FasMapLocationDot: [[${location}#${location}]]`,
-    relation && `:FasHeartPulse: ${relation}`
+    affinity && `:FasHeartPulse: ${affinity}`
   ]
   .filter(sub => sub)
   .join('&nbsp;&nbsp;|&nbsp;&nbsp;');
@@ -40,14 +40,14 @@ function formatSub(location, affinity) {
 
 // Call modal form & declare variables
 const result = await MF.openForm('NPC');
-const relation = result.Relation.value;
+const affinity = result.Affinity.value;
 const gender = result.Gender.value;
 const job = result.Job.value;
 const location = result.Location.value;
 const name = result.Name.value;
 const race = result.Race.value;
-const sub = formatSub(location, relation);
-const tags = formatTags(relation, job, race);
+const sub = formatSub(location, affinity);
+const tags = formatTags(affinity, job, race);
 
 if (result.status === 'ok') {
 
@@ -66,6 +66,10 @@ _%>
 
 ---
 type: npc
+relationships: 
+- target: "[[]]" 
+  type: ""
+
 locations:
  - <% location ? `"[[${location}]]"` : '' %>
 tags:
@@ -91,6 +95,23 @@ ___
 
 
 > [!column|flex 3]
+>>[!tldr]- RELATIONSHIPS
+>>```dataviewjs
+>>const results = dv.pages('"Compendium/NPC\'s" or "Compendium/Party/Player Characters"')
+>>    .where(p => p.relationships && p.relationships.some(r => 
+>>        r.target.path === "Compendium/NPC's/<% name %>.md" || r.target.path === "Compendium/Party/Player Characters/<% name %>.md"));
+>>
+>>for (let result of results) {
+>>    if (result.file.path !== "Compendium/NPC's/<% name %>.md" || result.file.path !== "Compendium/Party/Player Characters/<% name %>.md") {
+>>        let relationships = result.relationships.filter(r => 
+>>            r.target.path === "Compendium/NPC's/<% name %>.md" || r.target.path === "Compendium/Party/Player Characters/<% name %>.md");
+>>
+>>        relationships.forEach(relationship => {
+>>            dv.list([`[[${result.file.name}]] (${relationship.type})`]);
+>>        });
+>>    }
+>>}
+>
 >> [!important]- QUESTS
 >>```dataview
 >>LIST WITHOUT ID headerLink

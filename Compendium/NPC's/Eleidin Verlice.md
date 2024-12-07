@@ -1,5 +1,10 @@
 ---
 type: npc
+relationships:
+- target: "[[Paloma Beltre]]" 
+  type: "Ally"
+- target: "[[Rythe Sterling]]"
+  type: "Enemy"
 locations:
 - "[[Feywild]]"
 tags:

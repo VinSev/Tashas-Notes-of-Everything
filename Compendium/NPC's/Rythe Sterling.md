@@ -27,6 +27,23 @@ ___
 
 #### marker
 > [!column|flex 3]
+>>[!tldr]- RELATIONSHIPS
+>>```dataviewjs
+>>const results = dv.pages('"Compendium/NPC\'s" or "Compendium/Party/Player Characters"')
+>>    .where(p => p.relationships && p.relationships.some(r => 
+>>        r.target.path === "Compendium/NPC's/Rythe Sterling.md" || r.target.path === "Compendium/Party/Player Characters/Rythe Sterling.md"));
+>>
+>>for (let result of results) {
+>>    if (result.file.path !== "Compendium/NPC's/Rythe Sterling.md" || result.file.path !== "Compendium/Party/Player Characters/Rythe Sterling.md") {
+>>        let relationships = result.relationships.filter(r => 
+>>            r.target.path === "Compendium/NPC's/Rythe Sterling.md" || r.target.path === "Compendium/Party/Player Characters/Rythe Sterling.md");
+>>
+>>        relationships.forEach(relationship => {
+>>            dv.list([`[[${result.file.name}]] (${relationship.type})`]);
+>>        });
+>>    }
+>>}
+>
 >> [!important]- QUESTS:
 >>```dataview
 >>LIST WITHOUT ID headerLink

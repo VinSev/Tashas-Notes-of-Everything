@@ -39,8 +39,8 @@
           }
         },
         {
-          "name": "Relation",
-          "label": "Relation:",
+          "name": "Affinity",
+          "label": "Affinity:",
           "description": "",
           "isRequired": false,
           "input": {
