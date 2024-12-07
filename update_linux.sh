@@ -2,9 +2,11 @@
 
 backup_contents() {
     BACKUP_DIR="./Backups"
+    TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+    BACKUP_FOLDER="$BACKUP_DIR/$TIMESTAMP"
 
-    mkdir -p "$BACKUP_DIR"
-    cp -r ./* "$BACKUP_DIR/"
+    mkdir -p "$BACKUP_FOLDER"
+    cp -r ./* "$BACKUP_FOLDER/"
 }
 
 backup_contents
