@@ -75,6 +75,10 @@ if (result.status === 'ok') {
 -%>
 ---
 type: pc
+relationships: 
+- target: "[[]]" 
+  type: ""
+  
 tags:
 <% tags ? tags : ' - ' %>
 headerLink: "[[<% name %>#<% name %>]]"
@@ -103,6 +107,23 @@ ___
 > Character description here
 
 > [!column|flex 3]
+>>[!tldr]- RELATIONSHIPS
+>>```dataviewjs
+>>const results = dv.pages('"Compendium/NPC\'s" or "Compendium/Party/Player Characters"')
+>>    .where(p => p.relationships && p.relationships.some(r => 
+>>        r.target.path === "Compendium/NPC's/<% name %>.md" || r.target.path === "Compendium/Party/Player Characters/<% name %>.md"));
+>>
+>>for (let result of results) {
+>>    if (result.file.path !== "Compendium/NPC's/<% name %>.md" || result.file.path !== "Compendium/Party/Player Characters/<% name %>.md") {
+>>        let relationships = result.relationships.filter(r => 
+>>            r.target.path === "Compendium/NPC's/<% name %>.md" || r.target.path === "Compendium/Party/Player Characters/<% name %>.md");
+>>
+>>        relationships.forEach(relationship => {
+>>            dv.list([`[[${result.file.name}]] (${relationship.type})`]);
+>>        });
+>>    }
+>>}
+>
 >> [!info]- STORYLINES
 >>```dataview
 >>LIST WITHOUT ID headerLink
