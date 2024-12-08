@@ -3,16 +3,6 @@
 //                        Helper Functions
 // ###########################################################
 
-// Convert string to camelCase
-function toCamelCase(str) {
-  return str
-    .replace(/(?:^\w|[A-Z]|\b\w|\s+|[-_])/g, (match, index) =>
-      index === 0 ? match.toLowerCase() : match.toUpperCase()
-    )
-    .replace(/[\s-_]+/g, '');
-}
-
-// Return icon based on type
 function getIcon(type) {
   const iconMappings = {
     Academy: ':FasSchool:',
@@ -82,39 +72,23 @@ function getIcon(type) {
   return iconMappings[type] || ':FasCircleQuestion:';
 }
 
-// Return modified path based on location
-const dv = app.plugins.plugins.dataview.api;
-function getPath(location) {
-	const match = dv.pages('"Compendium/Atlas"')
-		.where(p => p.type === 'locale' && p.file.name === location)
-		.map(obj => obj.file.path.split('/').slice(2, -1).join('/'))
-		.find(Boolean);
-
-	return match || '';
-}
-
 // ###########################################################
 //                        Main Code Section
 // ###########################################################
 
-// Call modal form & declare variables
 const result = await MF.openForm('LANDMARK');
 const location = result.Location.value;
 const name = result.Name.value;
 let type = result.Type.value;
 const icon = getIcon(type);
-const path = getPath(location);
+const path = tp.user.getPath(location, ['locale']);
+const tags = type ? `location/${tp.user.toCamelCase(type)}` : '';
 
 if (result.status === 'ok') {
-
-    // Rename file & open in new tab; Fire toast notification
     await tp.file.move(`Compendium/Atlas/${location ? `${path}/` : ''}${name}/${name}`);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
     new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New landmark <span style="text-decoration: underline;">${name}</span> added`;
-
 } else {
-
-    // Fire toast notification & exit templater
     new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Landmark has not been added`;
     return;
 }
@@ -124,9 +98,9 @@ _%>
 cssClasses: grayTable, wideTable
 type: landmark
 locations:
- - <% location ? `"[[${location}]]"` : '' %>
+- <% location ? `"[[${location}]]"` : '' %>
 tags:
- - <% type ? `location/${toCamelCase(type)}` : '' %>
+- <% tags ? tags : '' %>
 headerLink: "[[<% name %>#<% name %>]]"
 ---
 

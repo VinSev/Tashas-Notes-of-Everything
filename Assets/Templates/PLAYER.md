@@ -3,26 +3,15 @@
 //                       Helper Functions
 // ###########################################################
 
-// Convert string to camelCase
-function toCamelCase(str) {
-  return str
-    .replace(/(?:^\w|[A-Z]|\b\w|\s+|[-_])/g, (match, index) =>
-      index === 0 ? match.toLowerCase() : match.toUpperCase()
-    )
-    .replace(/[\s-_]+/g, '');
-}
-
-// Format tags
 function formatTags(pclass, race) {
   return [
-    pClass && ` - class/${toCamelCase(pClass)}`,
-    race && ` - race/${toCamelCase(race)}`
+    pClass && ` - class/${tp.user.toCamelCase(pClass)}`,
+    race && ` - race/${tp.user.toCamelCase(race)}`
   ]
   .filter(tag => tag)
   .join('\n');
 }
 
-// Return icon based on class
 function getIcon(pClass) {
   const iconMappings = {
     Artificer: ':RiToolsFill: Specialist',
@@ -47,7 +36,6 @@ function getIcon(pClass) {
 //                         Main Code
 // ###########################################################
 
-// Call modal form & declare variables
 const result = await MF.openForm('PC');
 const quote = result.Quote.value;
 const level = result.Level.value;
@@ -60,15 +48,11 @@ const race = result.Race.value;
 const tags = formatTags(pClass, race);
 
 if (result.status === 'ok') {
-
-    // Rename file & open in new tab; Fire toast notification
     await tp.file.rename(name);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
     new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New player character <span style="text-decoration: underline;">${name}</span> added`;
 
 } else {
-
-    // Fire toast notification & exit templater
     new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Player character has not been added`;
     return;
 }
@@ -80,7 +64,7 @@ relationships:
   type: ""
   
 tags:
-<% tags ? tags : ' - ' %>
+- <% tags ? tags : '' %>
 headerLink: "[[<% name %>#<% name %>]]"
 level: "<% level ? level : '' %>"
 race: "<% race ? race : '' %>"

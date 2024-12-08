@@ -1,5 +1,6 @@
 Assets/*
-!Assets/Templates
+!Assets/Scripts/
+!Assets/Templates/
 
 Compendium/
 

@@ -6,7 +6,7 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FasHouse"
+      "RiJavascriptFill"
     ],
     "recentlyUsedIconsSize": 1,
     "rules": [],
@@ -56,5 +56,6 @@
   "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Waterdeep": "FasCity",
   "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance": "FasHandshake",
   "Assets/Documents": "FasFile",
-  "INDEX.md": "FasHouse"
+  "INDEX.md": "FasHouse",
+  "Assets/Scripts": "RiJavascriptFill"
 }

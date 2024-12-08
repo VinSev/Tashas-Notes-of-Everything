@@ -3,7 +3,6 @@
 //                        Helper Functions
 // ###########################################################
 
-// Return icon based on type
 function getIcon(type) {
 	const iconMappings = {
 		Continent: ':FasEarthAmericas:',
@@ -13,50 +12,33 @@ function getIcon(type) {
 	return iconMappings[type] || ':fas_question:';
 }
 
-// Return modified path based on location
-const dv = app.plugins.plugins.dataview.api;
-function getPath(location) {
-	const match = dv.pages('"Compendium/Atlas"')
-		.where(p => p.type === 'realm' && p.file.name === location)
-		.map(obj => obj.file.path.split('/').slice(2, -1).join('/'))
-		.find(Boolean);
-
-	return match || '';
-}
-
 // ###########################################################
 //                        Main Code Section
 // ###########################################################
 
-// Call modal form & declare variables
 const result = await MF.openForm('CONTINENT');
 const location = result.Location.value;
 const name = result.Name.value;
 const type = result.Type.value;
 const icon = getIcon(type);
-const path = getPath(location);
+const path = tp.user.getPath(location, ['realm']);
 
 if (result.status === 'ok') {
-
-    // Rename file & open in new tab; Fire toast notification
     await tp.file.move(`Compendium/Atlas/${location ? `${path}/` : ''}${name}/${name}`);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New ${type ? type.toLowerCase() : 'location'} <span style="text-decoration: underline;">${name}</span> added`;
-
+    tp.user.showNotice(true, type ? type : 'Location', name)
 } else {
-
-    // Fire toast notification & exit templater
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Location has not been added`;
-    return;
+    tp.user.showNotice(false, type ? type : 'Location', name)
+    return
 }
 _%>
 
 ---
 type: <% type.toLowerCase() %>
 locations:
- - <% location ? `"[[${location}]]"` : '' %>
+- <% location ? `"[[${location}]]"` : '' %>
 tags:
- - 
+- 
 headerLink: "[[<% name %>#<% name %>]]"
 ---
 
