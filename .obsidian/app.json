@@ -16,5 +16,6 @@
   "defaultViewMode": "preview",
   "rightToLeft": false,
   "propertiesInDocument": "hidden",
-  "focusNewTab": true
+  "focusNewTab": true,
+  "showUnsupportedFiles": true
 }
