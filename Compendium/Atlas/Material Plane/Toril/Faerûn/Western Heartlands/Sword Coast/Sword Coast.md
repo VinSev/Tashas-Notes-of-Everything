@@ -1,15 +1,15 @@
 ---
-type: territory
+type: province
 locations:
-- "[[Faerûn]]"
+  - "[[Western Heartlands]]"
 tags:
-- location/territory
-headerLink: "[[The Sword Coast#The Sword Coast]]"
+  - location/territory
+headerLink: "[[Sword Coast#The Sword Coast]]"
 ---
 
 ![[swordCoast.jpg|banner]]
 ###### The Sword Coast
-<span class="sub2">:FasMap: General Region</span>
+<span class="sub2">:FasMap: Province</span>
 ___
 
 > [!quote|no-t] SUMMARY
@@ -55,8 +55,8 @@ dv.list(data);
 >> [!example]- LOCATIONS
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast"
-WHERE type= "province"
+FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands/The Sword Coast"
+WHERE type= "locale"
 SORT file.name ASC
 >
 >> [!note]- HISTORY

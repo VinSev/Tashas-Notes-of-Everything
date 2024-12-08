@@ -1,9 +1,9 @@
 ---
 type: realm
 locations:
-- "[[Material Plane]]"
+ - "[[Material Plane]]"
 tags:
-- 
+ - 
 headerLink: "[[Toril#Toril]]"
 ---
 

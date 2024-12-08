@@ -6,7 +6,7 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FasHandshake"
+      "FasMap"
     ],
     "recentlyUsedIconsSize": 1,
     "rules": [],
@@ -44,7 +44,6 @@
   "Compendium/Atlas/Material Plane": "FasCircleHalfStroke",
   "Compendium/Atlas/Material Plane/Toril": "FasGlobe",
   "Compendium/Atlas/Material Plane/Toril/Faerûn": "FasEarthAmericas",
-  "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast": "FasMap",
   "Compendium/Atlas/Feywild": "FasCircleHalfStroke",
   "Compendium/Lore/Deities": "FasPersonRays",
   "Compendium/Lore/Events": "FasCalendar",
@@ -52,7 +51,8 @@
   "Compendium/Lore/Organizations": "FasSitemap",
   "Compendium/Party/Player Characters": "FasUser",
   "Compendium/Party/Quests": "FasCircleExclamation",
-  "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Baldurs Gate": "FasCity",
-  "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Waterdeep": "FasCity",
-  "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance": "FasHandshake"
+  "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands": "FasMap",
+  "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands/Sword Coast": "FasMap",
+  "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands/Sword Coast/Baldurs Gate": "FasCity",
+  "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands/Sword Coast/Waterdeep": "FasCity"
 }

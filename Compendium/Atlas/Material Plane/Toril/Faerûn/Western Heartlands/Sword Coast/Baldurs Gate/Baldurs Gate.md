@@ -1,20 +1,19 @@
 ---
-type: province
+type: locale
 locations:
-  - "[[The Sword Coast]]"
+  - "[[Sword Coast]]"
 tags:
-  - location/coalition
-headerLink: "[[Lords Alliance#Lords Alliance]]"
+  - location/city
+headerLink: "[[Baldurs Gate#Baldurs Gate]]"
 ---
 
-![[lordsAlliance.jpg|banner]]
-###### Lords Alliance
-<span class="sub2">:LiHandshake: Coalition</span>
+![[baldursGate.webp|banner]]
+###### Baldurs Gate
+<span class="sub2">:FasCity: City</span>
 ___
 
 > [!quote|no-t] SUMMARY
->The Lords' Alliance, also known as the Council of Lords, was a partnership of merchant cities founded in the early 14th century DR. Its members were from the [[The Sword Coast]], the North and Western Heartlands, including [[Waterdeep]], Silverymoon, [[Baldurs Gate]], and Neverwinter, as well as other free cities and towns in the region, which made up the bulk of the organization. It was formed to oppose the growing influence of the Black Network in the North, the Shadow Thieves of Amn, rampaging hordes of orcs, and Northlander raiders.
-
+>Baldur's Gate, also called simply the Gate, is the largest metropolis and city-state on the Sword Coast, within the greater Western Heartlands. It is a crowded city of commerce and opportunity, perhaps the most prosperous and influential merchant city on the western coast of [[Faerûn#Faerûn]]. Despite its long-standing presence as a neutral power, the leaders of Baldur's Gate are members of the Lords' Alliance of powers in the west.
 #### marker
 > [!column|flex 3]
 > > [!hint]-  NPC's
@@ -55,13 +54,12 @@ dv.list(data);
 >> [!example]- LOCATIONS
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance"
-WHERE type= "locale"
+FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands/The Sword Coast/Baldurs Gate"
+WHERE type= "landmark"
 SORT file.name ASC
 >
 >> [!note]- HISTORY
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Session Notes" AND [[Lords' Alliance]]
+FROM "Session Notes" AND [[Baldurs Gate]]
 SORT file.ctime DESC
-#### marker

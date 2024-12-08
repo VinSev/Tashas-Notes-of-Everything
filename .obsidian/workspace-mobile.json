@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "INDEX.md",
+                "file": "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Baldurs Gate/Baldurs Gate.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "INDEX"
+              "title": "Baldurs Gate"
             }
           }
         ]
@@ -104,6 +104,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "templater-obsidian:Templater": false,
       "modalforms:Edit forms": false,
       "graph:Open graph view": false,
       "command-palette:Open command palette": false
@@ -111,9 +112,9 @@
   },
   "active": "50bde93351dd1862",
   "lastOpenFiles": [
+    "INDEX.md",
     "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Baldurs Gate/Baldurs Gate.md",
     "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Baldurs Gate/Elfsong Tavern.md",
-    "INDEX.md",
     "Compendium/NPC's/Eleidin Verlice.md",
     "Compendium/Lore/Deities/TestGod 1.md",
     "Compendium/NPC's/Mobile Works.md",

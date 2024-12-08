@@ -1,19 +1,20 @@
 ---
-type: locale
+type: territory
 locations:
-  - "[[Lords Alliance]]"
+ - "[[Faerûn]]"
 tags:
-  - location/city
-headerLink: "[[Baldurs Gate#Baldurs Gate]]"
+ - location/generalRegion
+headerLink: "[[Western Heartlands#Western Heartlands]]"
 ---
 
-![[baldursGate.webp|banner]]
-###### Baldurs Gate
-<span class="sub2">:FasCity: City</span>
+![[westernHeartlands.jpg|banner]]
+###### Western Heartlands
+<span class="sub2">:FasMap: General Region</span>
 ___
 
 > [!quote|no-t] SUMMARY
->Baldur's Gate, also called simply the Gate, is the largest metropolis and city-state on the Sword Coast, within the greater Western Heartlands. It is a crowded city of commerce and opportunity, perhaps the most prosperous and influential merchant city on the western coast of [[Faerûn#Faerûn]]. Despite its long-standing presence as a neutral power, the leaders of Baldur's Gate are members of the Lords' Alliance of powers in the west.
+>The Western Heartlands (originally "Hartlands" for the abundance of deer) is a region located in the western portion of [[Faerûn]]. It stretches from the [[Sword Coast]] region at water's edge of the Sea of Swords in the west, to the Storm Horn Mountains in the east. The region extends north until the Lizard Marsh of the Delimbiyr Vale, including the High Moor to the northeast, and went as far south to the Lands of Intrigue of Amn, Tethyr and Calimshan. 
+
 #### marker
 > [!column|flex 3]
 > > [!hint]-  NPC's
@@ -54,12 +55,13 @@ dv.list(data);
 >> [!example]- LOCATIONS
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Baldurs Gate"
-WHERE type= "landmark"
+FROM "Compendium/Atlas/Material Plane/Toril/Faerûn"
+WHERE type= "province"
 SORT file.name ASC
 >
 >> [!note]- HISTORY
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Session Notes" AND [[Baldurs Gate]]
+FROM "Session Notes" AND [[Western Heartlands]]
 SORT file.ctime DESC
+#### marker

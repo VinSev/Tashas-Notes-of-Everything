@@ -121,7 +121,7 @@ dv.list(data);
 >>```dataview
 LIST WITHOUT ID headerlink + " (" + type + ")"
 FROM "Compendium/Atlas/<% location ? `${path}/` : '' %><% name %>"
-WHERE (type= "province" OR type="locale") AND replace(file.path, "/" + file.name + "/" + file.name + ".md", "") = "Compendium/Atlas/<% location ? `${path}/` : '' %><% name %>"
+WHERE type="province"
 SORT file.name ASC
 >
 >> [!note]- HISTORY
