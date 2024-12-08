@@ -15,8 +15,8 @@ dv.table(["cover", "name", "details"],
   .sort(page => page.file.name, "asc")
     .map(p => [
       `![](${vault}/${p.cover})`,
-      p.headerLink + `<br>` + `:FasCrown: Level ${p.level}`,
-      `<div style="text-align: center;">` + (obsidian.Platform.isMobile ? `:FasUserGroup: ${p.race}<br>:RiSwordFill: ${p.class}` : `:FasUserGroup: ${p.race} / :RiSwordFill: ${p.class}`) + `</div>`
+      p.headerLink,
+      `<div style="text-align: center;"> <span style="white-space: nowrap;">:FasCrown: Level ${p.level}</span> <span style="white-space: nowrap;">/</span> <span style="white-space: nowrap;">:FasUserGroup: ${p.race}</span> <span style="white-space: nowrap;">/</span> <span style="white-space: nowrap;">:RiSwordFill: ${p.class}</span> </div>`
     ])
 );
 ```
