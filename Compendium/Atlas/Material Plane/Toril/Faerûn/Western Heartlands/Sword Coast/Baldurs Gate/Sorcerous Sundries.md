@@ -8,7 +8,7 @@ tags:
 headerLink: "[[Sorcerous Sundries#Sorcerous Sundries]]"
 ---
 
-![[banner.jpg|banner]]
+![[sorcSundries.jpg|banner]]
 ###### Sorcerous Sundries
 <span class="sub2">:FasCartShopping: Shop</span>
 ___

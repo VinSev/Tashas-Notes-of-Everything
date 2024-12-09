@@ -20,7 +20,7 @@ console.log('NPC Toggle: event listener attached');
 //              FIX BROKEN ICON CODES ON STARTUP
 // ###########################################################
 
-// Check console for message and trigger reload on match
+// Console.info event listener
 const origConsoleInfo = console.info;
 console.info = (...args) => {
     origConsoleInfo.apply(console, args);

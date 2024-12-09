@@ -71,7 +71,7 @@ dv.list(data);
 >>```dataview
 LIST WITHOUT ID headerLink
 FROM "Compendium/Atlas/<% name %>"
-WHERE type= "realm"
+WHERE type="realm"
 SORT file.name ASC
 >
 >> [!note]- HISTORY

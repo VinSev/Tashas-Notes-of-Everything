@@ -1,8 +1,9 @@
 ---
 type: continent
 locations:
-- "[[Toril]]"
+ - "[[Toril]]"
 tags:
+ -
 headerLink: "[[Faerûn#Faerûn]]"
 ---
 

@@ -1,7 +1,7 @@
 ---
 type: locale
 locations:
-  - "[[Lords Alliance]]"
+  - "[[Sword Coast]]"
 tags:
   - location/city
 headerLink: "[[Waterdeep#Waterdeep]]"
@@ -55,7 +55,7 @@ dv.list(data);
 >> [!example]- LOCATIONS
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/The Sword Coast/Lords Alliance/Waterdeep"
+FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands/The Sword Coast/Waterdeep"
 WHERE type= "landmark"
 SORT file.name ASC
 >
