@@ -15,9 +15,9 @@ const tags = domains ? domains.map(value => `- domain/${tp.user.toCamelCase(valu
 if (result.status === 'ok') {
     await tp.file.rename(name);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New deity <span style="text-decoration: underline;">${name}</span> added`;
+    tp.user.showNotice(true, 'Deity', name)
 } else {
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Deity has not been added`;
+    tp.user.showNotice(false, 'Deity', name)
     return;
 }
 _%>

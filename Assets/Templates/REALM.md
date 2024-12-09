@@ -11,11 +11,10 @@ const path = tp.user.getPath(location, ['plane']);
 if (result.status === 'ok') {
     await tp.file.move(`Compendium/Atlas/${location ? `${path}/` : ''}${name}/${name}`);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New realm <span style="text-decoration: underline;">${name}</span> added`;
-
+    tp.user.showNotice(true, 'Realm', name)
 } else {
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Realm has not been added`;
-    return;
+    tp.user.showNotice(false, 'Realm', name)
+    return
 }
 _%>
 

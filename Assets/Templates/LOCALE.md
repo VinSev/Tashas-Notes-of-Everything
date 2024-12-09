@@ -36,11 +36,10 @@ const tags = type ? `location/${tp.user.toCamelCase(type)}` : '';
 if (result.status === 'ok') {
     await tp.file.move(`Compendium/Atlas/${location ? `${path}/` : ''}${name}/${name}`);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New locale <span style="text-decoration: underline;">${name}</span> added`;
-
+    tp.user.showNotice(true, 'Locale', name)
 } else {
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Local has not been added`;
-    return;
+    tp.user.showNotice(false, 'Locale', name)
+    return
 }
 _%>
 

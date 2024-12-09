@@ -11,10 +11,10 @@ const location = result.Location.value;
 if (result.status === 'ok') {
     await tp.file.rename(name);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New organization <span style="text-decoration: underline;">${name}</span> added`;
+    tp.user.showNotice(true, 'Organization', name)
 } else {
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Organization has not been added`;
-    return;
+    tp.user.showNotice(false, 'Organization', name)
+    return
 }
 _%>
 

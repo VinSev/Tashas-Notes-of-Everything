@@ -29,10 +29,10 @@ const sub = formatSub(status, npc);
 if (result.status === 'ok') {
     await tp.file.rename(name);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New quest <span style="text-decoration: underline;">${name}</span> added`;
+    tp.user.showNotice(true, 'Quest', name)
 } else {
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Quest has not been added`;
-    return;
+    tp.user.showNotice(false, 'Quest', name)
+    return
 }
 _%>
 

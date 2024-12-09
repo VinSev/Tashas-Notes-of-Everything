@@ -16,7 +16,6 @@ parent.window.addEventListener('change', ({ target }) => {
 });
 console.log('NPC Toggle: event listener attached');
 
-
 // ###########################################################
 //              FIX BROKEN ICON CODES ON STARTUP
 // ###########################################################
@@ -29,7 +28,6 @@ console.info = (...args) => {
         reload();
     }
 };
-
 
 // Reload Tabs (only if reading view & broken icons detected)
 const reload = async () => {

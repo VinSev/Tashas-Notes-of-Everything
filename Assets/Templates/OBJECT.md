@@ -30,10 +30,10 @@ const tags = type ? "object/" + tp.user.toCamelCase(type) : '';
 if (result.status === 'ok') {
     await tp.file.rename(name);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New object <span style="text-decoration: underline;">${name}</span> added`;
+    tp.user.showNotice(true, 'Object', name)
 } else {
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Object has not been added`;
-    return;
+    tp.user.showNotice(false, 'Object', name)
+    return
 }
 _%>
 

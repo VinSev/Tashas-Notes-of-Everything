@@ -99,4 +99,3 @@ SORT file.name ASC
 LIST WITHOUT ID headerLink
 FROM "Session Notes" AND [[<% name %>]]
 SORT file.ctime DESC
-#### marker

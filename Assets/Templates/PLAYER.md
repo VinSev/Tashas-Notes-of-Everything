@@ -50,11 +50,10 @@ const tags = formatTags(pClass, race);
 if (result.status === 'ok') {
     await tp.file.rename(name);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New player character <span style="text-decoration: underline;">${name}</span> added`;
-
+    tp.user.showNotice(true, 'Player Character', name)
 } else {
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Player character has not been added`;
-    return;
+    tp.user.showNotice(false, 'Player Character', name)
+    return
 }
 -%>
 ---

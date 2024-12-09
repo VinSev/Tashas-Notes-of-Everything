@@ -3,22 +3,16 @@
 //                        Main Code Section
 // ###########################################################
 
-// Call modal form & declare variables
 const result = await MF.openForm('PLANE');
 const name = result.Name.value;
 
 if (result.status === 'ok') {
-
-    // Rename file & open in new tab; Fire toast notification
     await tp.file.move(`Compendium/Atlas/${name}/${name}`);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New plane <span style="text-decoration: underline;">${name}</span> added`;
-
+    tp.user.showNotice(true, 'Plane', name)
 } else {
-
-    // Fire toast notification & exit templater
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>Plane has not been added`;
-    return;
+    tp.user.showNotice(false, 'Plane', name)
+    return
 }
 _%>
 

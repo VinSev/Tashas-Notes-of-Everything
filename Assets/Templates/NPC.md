@@ -22,7 +22,6 @@ function formatSub(location, affinity) {
   .join('&nbsp;&nbsp;|&nbsp;&nbsp;');
 }
 
-
 // ###########################################################
 //                         Main Code
 // ###########################################################
@@ -40,11 +39,10 @@ const tags = formatTags(affinity, job, race);
 if (result.status === 'ok') {
     await tp.file.rename(name);
     await app.workspace.getLeaf(true).openFile(tp.file.find_tfile(name));
-    new Notice().noticeEl.innerHTML = `<span style="color: green; font-weight: bold;">Finished!</span><br>New NPC <span style="text-decoration: underline;">${name}</span> added`;
-
+    tp.user.showNotice(true, 'NPC', name)
 } else {
-    new Notice().noticeEl.innerHTML = `<span style="color: red; font-weight: bold;">Cancelled:</span><br>NPC has not been added`;
-    return;
+    tp.user.showNotice(false, 'NPC', name)
+    return
 }
 _%>
 
