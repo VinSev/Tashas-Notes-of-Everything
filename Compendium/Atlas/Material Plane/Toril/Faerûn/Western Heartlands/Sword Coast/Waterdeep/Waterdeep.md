@@ -55,7 +55,7 @@ dv.list(data);
 >> [!example]- LOCATIONS
 >>```dataview
 LIST WITHOUT ID headerLink
-FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands/The Sword Coast/Waterdeep"
+FROM "Compendium/Atlas/Material Plane/Toril/Faerûn/Western Heartlands/Sword Coast/Waterdeep"
 WHERE type= "landmark"
 SORT file.name ASC
 >
