@@ -1,7 +1,9 @@
 <%*
+
 // ###########################################################
 //                  NPC TOGGLE FOR LOCATION VIEW
 // ###########################################################
+
 parent.window.addEventListener('change', ({ target }) => {
     if (target.id === 'npc' && target.type === 'checkbox') {
         const [directView, childView] = document.querySelectorAll('.npcDirect, .npcChild');
@@ -16,32 +18,27 @@ parent.window.addEventListener('change', ({ target }) => {
 });
 console.log('NPC Toggle: event listener attached');
 
-
 // ###########################################################
 //              FIX BROKEN ICON CODES ON STARTUP
 // ###########################################################
 
-// Console.info event listener
-const origConsoleInfo = console.info;
-console.info = (...args) => {
-    origConsoleInfo.apply(console, args);
-    if (args[0].includes("Loaded icon pack 'remix-icons'")) {
-        reload();
-    }
-};
+const iconize = app.plugins.plugins["obsidian-icon-folder"];
+if (iconize) {
+    const event = iconize.api.getEventEmitter();
+    const rerender = () => {
+        const leaves = app.workspace
+            .getLeavesOfType("markdown")
+            .filter(leaf =>
+                leaf?.view?.getMode?.() === "preview" &&
+                leaf?.view?.containerEl &&
+                /:[A-Za-z]+:/.test(leaf.view.containerEl.innerText || "")
+            );
 
-
-// Reload Tabs (only if reading view & broken icons detected)
-const reload = async () => {
-    const leaves = this.app.workspace.getLeavesOfType('markdown');
-    for (const leaf of leaves) {
-        if (leaf.view?.getMode && leaf.view.getMode() === "preview" && /:[A-Za-z]*:/
-            .test(leaf.containerEl.innerHTML)) {
-            const file = leaf.view.file;
-            await leaf.setViewState({ type: 'empty' });
-            await leaf.setViewState({ type: 'markdown', state: { file: file.path } });
-            console.log(`Reloaded tab: ${file.basename}`);
+        for (const leaf of leaves) {
+            leaf.view?.previewMode?.rerender?.(true);
+            console.log("Refreshed tab:", leaf.getDisplayText());
         }
-    }
-};
+    };
+    event.on("allIconsLoaded", rerender);
+}
 _%>
