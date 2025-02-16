@@ -119,7 +119,6 @@ ___
 | Item 2 | 80 <span class="goldcoin">:RiCoinsFill:</span>  |
 | Item 3 | 20 <span class="silvercoin">:RiCoinsFill:</span>   |
 | Item 4 | 100 <span class="coppercoin">:RiCoinsFill:</span>  |
-
 <span class="clearfix"></span>
 
 

@@ -31,15 +31,15 @@ dv.table(["cover", "name", "details"],
 
 > [!agenda]-  The Party<br><span class="sub">Objectives, Players, & Quests</span>
 >```dataviewjs
->dv.container.className += ' listMe';
->let tags = [];
->let pages = dv.pages('"Compendium/Party/Quests"').sort(p => p.file.name, "asc");
->dv.table(["Name", "Status"], pages.map(page => {
->const questStatusTerms = ["quest/completed", "quest/abandoned", "quest/failed", "quest/ongoing", "quest/pending"];
->let status = questStatusTerms.find(term => page.tags && page.tags.includes(term));
->status = status ? `(${status.replace("quest/", "")})` : "";
->return [`- ${page.headerLink} ${status}`, status];
->}));
+> dv.container.className += ' listMe';
+> let tags = [];
+> let pages = dv.pages('"Compendium/Party/Quests"').sort(p => p.file.name, "asc");
+> dv.table(["Name", "Status"], pages.map(page => {
+> const questStatusTerms = ["quest/completed", "quest/abandoned", "quest/failed", "quest/ongoing", "quest/pending"];
+> let status = questStatusTerms.find(term => page.tags && page.tags.includes(term));
+> status = status ? `(${status.replace("quest/", "")})` : "";
+> return [`- ${page.headerLink} ${status}`, status];
+> }));
 >```
 > `BUTTON[pc]` `BUTTON[quest]`
 
@@ -55,7 +55,7 @@ dv.table(["cover", "name", "details"],
 > ```dataviewjs
 > dv.container.className += ' listMe';
 > let pages = dv.pages('"Compendium/Lore"').sort(p => p.file.name, "asc");  
->dv.table(["Name", "Type"], pages.map(page => [`- ${page.headerLink} (${page.type})`, page.type]));
+> dv.table(["Name", "Type"], pages.map(page => [`- ${page.headerLink} (${page.type})`, page.type]));
 >```
 > `BUTTON[deity, event, object, org]`
  
@@ -63,6 +63,6 @@ dv.table(["cover", "name", "details"],
 > ```dataviewjs
 > dv.container.className += ' listMe';
 > let pages = dv.pages('"Session Notes"').sort(p => p.file.name, "desc");  
->dv.table(["Date"], pages.map(page => [`- ${page.headerLink}`]));
+> dv.table(["Date"], pages.map(page => [`- ${page.headerLink}`]));
 >```
 > `BUTTON[note]`
