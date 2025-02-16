@@ -15,8 +15,8 @@
               "state": {
                 "file": "INDEX.md",
                 "mode": "preview",
-                "backlinks": false,
-                "source": true
+                "source": true,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "INDEX"
@@ -61,7 +61,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -106,7 +107,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -164,8 +167,8 @@
       "modalforms:Edit forms": true
     }
   },
-  "active": "e493bc2564fcbecb",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "INDEX.md"
+
   ]
 }
