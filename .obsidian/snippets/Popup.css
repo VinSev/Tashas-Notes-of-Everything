@@ -47,14 +47,3 @@ body {
 .popover.hover-popover .callout.callout[data-callout~="quote"] .callout-title {
 	display: none !important;
 }
-
-/* style title inside popover */
-.popover.hover-popover .inline-title {
-	padding-left: 5px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	background-image: linear-gradient(
-		var(--interactive-accent-base),
-		rgba(255, 0, 0, 0)
-	);
-}
