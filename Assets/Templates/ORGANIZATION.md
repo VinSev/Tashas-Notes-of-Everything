@@ -21,7 +21,7 @@ _%>
 ---
 type: organization
 relationships: 
-- target: "[[]]" 
+- target: "" 
   type: ""
   
 locations:
@@ -44,15 +44,15 @@ ___
 >>```dataviewjs
 >>const results = dv.pages('"Compendium/Lore/Organizations"')
 >>    .where(p => p.relationships && p.relationships.some(r => 
->>        r.target.path === "Compendium/Lore/Organizations/<% name %>.md"));
+>>        r && r.target && r.target.path && (r.target.path === "Compendium/Lore/Organizations/<% name %>.md")));
 >>
 >>for (let result of results) {
 >>    if (result.file.path !== "Compendium/Lore/Organizations/<% name %>.md") {
 >>        let relationships = result.relationships.filter(r => 
->>            r.target.path === "Compendium/Lore/Organizations/<% name %>.md");
+>>            r && r.target && r.target.path && (r.target.path === "Compendium/Lore/Organizations/<% name %>.md"));
 >>
 >>        relationships.forEach(relationship => {
->>            dv.list([`[[${result.file.name}]] (${relationship.type})`]);
+>>            dv.list([`[[${result.file.name}]] (${relationship.type ? relationship.type : "Unknown"})`]);
 >>        });
 >>    }
 >>}
