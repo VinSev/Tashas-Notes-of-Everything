@@ -3,14 +3,22 @@
 //                        Helper Functions
 // ###########################################################
 
-function getIcon(type) {
-  const iconMappings = {
-    Province: ':FasLandmark:',
-    State: ':FasLandmark:',
-    County: ':FasLandmark:',
-  };
+function formatSub(icon, type) {
+	return [
+		type && `{icon} {type} Event`
+	]
+  	.filter(sub => sub)
+  	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+}
 
-  return iconMappings[type] || ':FasCircleQuestion:';
+function getIcon(type) {
+  	const iconMappings = {
+    	Province: ':FasLandmark:',
+    	State: ':FasLandmark:',
+    	County: ':FasLandmark:',
+  	};
+
+  	return iconMappings[type] || ':FasCircleQuestion:';
 }
 
 // ###########################################################
@@ -24,6 +32,7 @@ const type = result.Type.value;
 const icon = getIcon(type);
 const path = tp.user.getPath(location, ['territory']);
 const tags = type ? `location/${tp.user.toCamelCase(type)}` : '';
+const sub = formatSub(icon, type);
 
 if (result.status === 'ok') {
     await tp.file.move(`Compendium/Atlas/${location ? `${path}/` : ''}${name}/${name}`);
@@ -46,7 +55,7 @@ headerLink: "[[<% name %>#<% name %>]]"
 
 ![[banner.jpg|banner]]
 ###### <% name %>
-<span class="sub2"><% type ? `${icon} ${type}` : '' %></span>
+<span class="sub2"><% sub ? sub : '' %></span>
 ___
 
 > [!quote|no-t] SUMMARY
@@ -54,7 +63,7 @@ ___
 
 
 > [!column|flex 3]
-> > [!hint]-  NPC's
+> > [!hint]- NPC's
 > > <input type="checkbox" id="npc"/><ul class="sortMenu"><li class="sortIcon">:RiListSettingsLine:<ul class="dropdown npcedit"><li><label for="npc" class="directLabel active">Direct Links Only</label></li><li><label for="npc" class="childLabel">Include Sub-Locations</label></li></ul></li></ul>
 > >```dataviewjs
 dv.container.className += ' npcDirect';

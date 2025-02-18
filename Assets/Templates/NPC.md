@@ -3,23 +3,23 @@
 //                       Helper Functions
 // ###########################################################
 
-function formatTags(affinity, job, race) {
-  return [
-    affinity && ` - alignment/${tp.user.toCamelCase(alignment)}`,
-    job && ` - job/${tp.user.toCamelCase(job)}`,
-    race && ` - race/${tp.user.toCamelCase(race)}`
-  ]
-  .filter(tag => tag)
-  .join('\n');
+function formatSub(location, affinity) {
+	return [
+		location && `:FasMapLocationDot: [[${location}#${location}]]`,
+		alignment && `:FasYinYang: ${alignment}`
+	]
+	.filter(sub => sub)
+	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
 }
 
-function formatSub(location, affinity) {
-  return [
-    location && `:FasMapLocationDot: [[${location}#${location}]]`,
-    alignment && `:FasYinYang: ${alignment}`
-  ]
-  .filter(sub => sub)
-  .join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+function formatTags(affinity, job, race) {
+	return [
+		affinity && ` - alignment/${tp.user.toCamelCase(alignment)}`,
+		job && ` - job/${tp.user.toCamelCase(job)}`,
+		race && ` - race/${tp.user.toCamelCase(race)}`
+	]
+	.filter(tag => tag)
+	.join('\n');
 }
 
 // ###########################################################
@@ -33,8 +33,8 @@ const job = result.Job.value;
 const location = result.Location.value;
 const name = result.Name.value;
 const race = result.Race.value;
-const sub = formatSub(location, alignment);
 const tags = formatTags(alignment, job, race);
+const sub = formatSub(location, alignment);
 
 if (result.status === 'ok') {
     await tp.file.rename(name);
@@ -54,6 +54,7 @@ tags:
 - <% tags ? tags : '' %>
 headerLink: "[[<% name %>#<% name %>]]"
 ---
+
 ###### <% name %>
 <span class="sub2"><% sub ? sub : '' %> </span>
 ___

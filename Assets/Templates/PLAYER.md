@@ -3,6 +3,15 @@
 //                       Helper Functions
 // ###########################################################
 
+function formatSub(alignment) {
+	return [
+		`:FasPerson: Player Character`,
+        alignment && `:FasYinYang: ${alignment}`
+	]
+  	.filter(sub => sub)
+  	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+}
+
 function formatTags(pclass, race) {
     return [
     	pClass && ` - class/${tp.user.toCamelCase(pClass)}`,
@@ -46,6 +55,7 @@ const name = result.Name.value;
 const gender = result.Gender.value;
 const race = result.Race.value;
 const tags = formatTags(pClass, race);
+const sub = formatSub(alignment);
 
 if (result.status === 'ok') {
     await tp.file.rename(name);
@@ -69,7 +79,7 @@ cover: "/Assets/Images/Portrait.jpg"
 ---
 
 ###### <% name %>
-<span class="sub2">:FasPerson: Player Character <% alignment ? `&nbsp; | &nbsp; :FasYinYang: ${alignment}` : '' %></span>
+<span class="sub2"><% sub ? sub : '' %></span>
 ___
 
 > [!infobox|no-t right]
@@ -90,7 +100,7 @@ ___
 >>[!tldr]- RELATIONSHIPS
 >> - [[Characters]] (status)
 >
->> [!info]- STORYLINES
+>>[!info]- STORYLINES
 >>```dataview
 >>LIST WITHOUT ID headerLink
 >>FROM "Compendium/Party/Quests" AND [[<% name %>]]

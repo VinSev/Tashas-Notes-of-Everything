@@ -1,5 +1,18 @@
 <%*
 // ###########################################################
+//                       Helper Functions
+// ###########################################################
+
+function formatSub(alignment) {
+    return [
+        `:FasCross: Deity`,
+        alignment && `:FasYinYang: ${alignment}`
+    ]
+    .filter(sub => sub)
+    .join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+}
+
+// ###########################################################
 //                        Main Code Section
 // ###########################################################
 
@@ -11,6 +24,7 @@ const domains = result.Domains.value;
 const pantheon = result.Pantheon.value;
 const rank = result.Rank.value;
 const tags = domains ? domains.map(value => `- domain/${tp.user.toCamelCase(value)}`).join("\n") : '';
+const sub = formatSub(alignment);
 
 if (result.status === 'ok') {
     await tp.file.rename(name);
@@ -30,7 +44,7 @@ headerLink: "[[<% name %>#<% name %>]]"
 ---
 
 ###### <% name %>
-<span class="sub2">:FasCross: Deity <% alignment ? `&nbsp; | &nbsp; :FasYinYang: ${alignment}` : '' %></span>
+<span class="sub2"><% sub ? sub : '' %></span>
 ___
 
 > [!infobox|no-t right]
@@ -48,7 +62,7 @@ ___
 
 
 > [!column|flex 3]
->> [!hint]-  NPC's
+>>[!hint]-  NPC's
 >>```dataview
 >>LIST WITHOUT ID headerLink
 >>FROM "Compendium/NPC's" AND [[<% name %>]] 

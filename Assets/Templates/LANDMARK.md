@@ -3,6 +3,14 @@
 //                        Helper Functions
 // ###########################################################
 
+function formatSub(icon, type) {
+	return [
+		type && `{icon} {type}`
+	]
+  	.filter(sub => sub)
+  	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+}
+
 function getIcon(type) {
   const iconMappings = {
     Academy: ':FasSchool:',
@@ -79,10 +87,11 @@ function getIcon(type) {
 const result = await MF.openForm('LANDMARK');
 const location = result.Location.value;
 const name = result.Name.value;
-let type = result.Type.value;
+const type = result.Type.value;
 const icon = getIcon(type);
 const path = tp.user.getPath(location, ['locale']);
 const tags = type ? `location/${tp.user.toCamelCase(type)}` : '';
+const sub = formatSub(icon, type);
 
 if (result.status === 'ok') {
     await tp.file.move(`Compendium/Atlas/${location ? `${path}/` : ''}${name}/${name}`);
@@ -106,7 +115,7 @@ headerLink: "[[<% name %>#<% name %>]]"
 
 ![[banner.jpg|banner]]
 ###### <% name %>
-<span class="sub2"><% type ? `${icon} ${type}` : '' %></span>
+<span class="sub2"><% sub ? sub : '' %></span>
 ___
 
 > [!quote|no-t] SUMMARY
@@ -123,14 +132,14 @@ ___
 
 
 > [!column|flex 3]
-> > [!hint]-  NPC's
-> >```dataview
-LIST WITHOUT ID headerLink
-FROM "Compendium/NPC's" AND [[<% name %>]]
-SORT file.name ASC
-> 
->> [!note]- HISTORY
+>>[!hint]-  NPC's
 >>```dataview
-LIST WITHOUT ID headerLink
-FROM "Session Notes" AND [[<% name %>]]
-SORT file.ctime DESC
+>>LIST WITHOUT ID headerLink
+>>FROM "Compendium/NPC's" AND [[<% name %>]]
+>>SORT file.name ASC
+> 
+>>[!note]- HISTORY
+>>```dataview
+>>LIST WITHOUT ID headerLink
+>>FROM "Session Notes" AND [[<% name %>]]
+>>SORT file.ctime DESC

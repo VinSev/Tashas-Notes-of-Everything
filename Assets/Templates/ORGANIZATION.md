@@ -1,5 +1,17 @@
 <%*
 // ###########################################################
+//                        Helper Functions
+// ###########################################################
+
+function formatSub() {
+	return [
+		`:FasSitemap: Organization`
+	]
+  	.filter(sub => sub)
+  	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+}
+
+// ###########################################################
 //                        Main Code Section
 // ###########################################################
 
@@ -7,6 +19,7 @@ const result = await MF.openForm('ORGANIZATION');
 const alignment = result.Alignment.value;
 const name = result.Name.value;
 const location = result.Location.value;
+const sub = formatSub();
 
 if (result.status === 'ok') {
     await tp.file.rename(name);
@@ -28,7 +41,7 @@ headerLink: "[[<% name %>#<% name %>]]"
 ---
 
 ###### <% name %>
-<span class="sub2">:FasSitemap: Organization</span>
+<span class="sub2"><% sub ? sub : '' %></span>
 ___
 
 > [!quote|no-t]

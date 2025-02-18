@@ -4,13 +4,13 @@
 // ###########################################################
 
 function formatSub(status, npc) {
-  return [
-    `:FasCircleExclamation: Quest`,
-    status && `:FasListCheck: ${status}`,
-    npc && `:FasUser: [[${npc}#${npc}]]`
-  ]
-  .filter(sub => sub)
-  .join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+	return [
+		:FasCircleExclamation: Quest`,
+		status && `:FasListCheck: ${status}`,
+		npc && `:FasUser: [[${npc}#${npc}]]`
+	]
+	.filter(sub => sub)
+	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
 }
 
 // ###########################################################

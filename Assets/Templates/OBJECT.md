@@ -3,6 +3,14 @@
 //                        Helper Functions
 // ###########################################################
 
+function formatSub(icon, type) {
+	return [
+		type && `{icon} {type} Event`
+	]
+  	.filter(sub => sub)
+  	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+}
+
 function getIcon(type) {
     const iconMappings = {
 	Armor: ':FasVest:',
@@ -26,6 +34,7 @@ const name = result.Name.value;
 const type = result.Type.value;
 const icon = getIcon(type);
 const tags = type ? "object/" + tp.user.toCamelCase(type) : '';
+const sub = formatSub(icon, type);
 
 if (result.status === 'ok') {
     await tp.file.rename(name);
@@ -45,7 +54,7 @@ headerLink: "[[<% name %>#<% name %>]]"
 ---
 
 ###### <% name %>
-<span class="sub2"><% type ? `${icon} ${type}` : '' %></span>
+<span class="sub2"><% sub ? sub : '' %></span>
 ___
 
 > [!quote|no-t]
