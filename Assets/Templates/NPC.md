@@ -5,7 +5,7 @@
 
 function formatTags(affinity, job, race) {
   return [
-    affinity && ` - affinity/${tp.user.toCamelCase(affinity)}`,
+    affinity && ` - alignment/${tp.user.toCamelCase(alignment)}`,
     job && ` - job/${tp.user.toCamelCase(job)}`,
     race && ` - race/${tp.user.toCamelCase(race)}`
   ]
@@ -16,7 +16,7 @@ function formatTags(affinity, job, race) {
 function formatSub(location, affinity) {
   return [
     location && `:FasMapLocationDot: [[${location}#${location}]]`,
-    affinity && `:FasHeartPulse: ${affinity}`
+    alignment && `:FasYinYang: ${alignment}`
   ]
   .filter(sub => sub)
   .join('&nbsp;&nbsp;|&nbsp;&nbsp;');
@@ -27,14 +27,14 @@ function formatSub(location, affinity) {
 // ###########################################################
 
 const result = await MF.openForm('NPC');
-const affinity = result.Affinity.value;
+const alignment = result.Alignment.value;
 const gender = result.Gender.value;
 const job = result.Job.value;
 const location = result.Location.value;
 const name = result.Name.value;
 const race = result.Race.value;
-const sub = formatSub(location, affinity);
-const tags = formatTags(affinity, job, race);
+const sub = formatSub(location, alignment);
+const tags = formatTags(alignment, job, race);
 
 if (result.status === 'ok') {
     await tp.file.rename(name);

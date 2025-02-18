@@ -4,32 +4,32 @@
 // ###########################################################
 
 function formatTags(pclass, race) {
-  return [
-    pClass && ` - class/${tp.user.toCamelCase(pClass)}`,
-    race && ` - race/${tp.user.toCamelCase(race)}`
-  ]
-  .filter(tag => tag)
-  .join('\n');
+    return [
+    	pClass && ` - class/${tp.user.toCamelCase(pClass)}`,
+        race && ` - race/${tp.user.toCamelCase(race)}`
+    ]
+    .filter(tag => tag)
+    .join('\n');
 }
 
 function getIcon(pClass) {
-  const iconMappings = {
-    Artificer: ':RiToolsFill: Specialist',
-    Barbarian: ':FasCity: Primal Path',
-    Bard: ':FasGuitar: College',
-    Cleric: ':FasPersonPraying: Divine Domain',
-    Druid: ':FasMoon: Circle',
-    Fighter: ':FasUserShield: Archetype',
-    Monk: ':FasHandFist: Tradition',
-    Paladin: ':FasFireFlameCurved: Oath',
-    Ranger: ':FasBullseye: Conclave',
-    Rogue: ':RiSwordFill: Archetype',
-    Sorcerer: ':FasHandSparkles: Origin',
-    Warlock: ':FasBurst: Patron',
-    Wizard: ':FasWandMagicSparkles: School'
-  };
+    const iconMappings = {
+        Artificer: ':RiToolsFill: Specialist',
+        Barbarian: ':FasCity: Primal Path',
+        Bard: ':FasGuitar: College',
+        Cleric: ':FasPersonPraying: Divine Domain',
+        Druid: ':FasMoon: Circle',
+        Fighter: ':FasUserShield: Archetype',
+        Monk: ':FasHandFist: Tradition',
+        Paladin: ':FasFireFlameCurved: Oath',
+        Ranger: ':FasBullseye: Conclave',
+        Rogue: ':RiSwordFill: Archetype',
+        Sorcerer: ':FasHandSparkles: Origin',
+        Warlock: ':FasBurst: Patron',
+        Wizard: ':FasWandMagicSparkles: School'
+    };
 
-  return iconMappings[pClass] || ':FasCircleQuestion: Sub Class';
+    return iconMappings[pClass] || ':FasCircleQuestion: Sub Class';
 }
 
 // ###########################################################
@@ -37,7 +37,7 @@ function getIcon(pClass) {
 // ###########################################################
 
 const result = await MF.openForm('PC');
-const quote = result.Quote.value;
+const alignment = result.Alignment.value;
 const level = result.Level.value;
 const pClass = result.pClass.value;
 const subClass = result.subClass.value;
@@ -69,8 +69,9 @@ cover: "/Assets/Images/Portrait.jpg"
 ---
 
 ###### <% name %>
-:FasPerson: Player Character &nbsp; | &nbsp; :FasQuoteLeft: <% quote ? quote : 'Quote or tagline here' %> :FasQuoteRight:
+<span class="sub2">:FasPerson: Player Character <% alignment ? `&nbsp; | &nbsp; :FasYinYang: ${alignment}` : '' %></span>
 ___
+
 > [!infobox|no-t right]
 > ![[portrait.jpg]]
 > ###### Details:
@@ -79,7 +80,7 @@ ___
 > | :FasCrown: Level   | `=this.level` |
 > | :RiSwordFill: Class |  `=this.class`|
 > | <% subType %> |  `=this.subClass`|
-> |  :FasUserGroup: Race |  `=this.race`
+> | :FasUserGroup: Race |  `=this.race` |
 > | :FasVenusMars: Gender | <% gender ? gender : '' %> |
 
 > [!quote|no-t]
