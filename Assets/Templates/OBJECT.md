@@ -3,19 +3,23 @@
 //                        Helper Functions
 // ###########################################################
 
-function formatSub(icon, type) {
+function formatSub(icon, type, is_magical, is_cursed, rarity) {
 	return [
-		type && `{icon} {type} Event`
+		icon && `{icon}`,
+        rarity && `{rarity}`
+        is_cursed && `cursed`,
+        is_magical && `magic`,
+        type && `{type}`
 	]
   	.filter(sub => sub)
-  	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
+  	.join(' ');
 }
 
 function getIcon(type) {
     const iconMappings = {
-	Armor: ':FasVest:',
-	Jewelry: ':FasGem:',
-	Weapon: ':RiSwordFill:',
+        Armor: ':FasVest:',
+        Jewelry: ':FasGem:',
+        Weapon: ':RiSwordFill:',
         'Magic Item': ':FasWandMagicSparkles:',
         'Religious Artifact': ':FasCross:',
         'Quest Item': ':FasScroll:',
@@ -32,9 +36,12 @@ function getIcon(type) {
 const result = await MF.openForm('OBJECT');
 const name = result.Name.value;
 const type = result.Type.value;
+const is_magical = result.Magical.value
+const is_cursed = result.Cursed.value
+const rarity = result.Rarity.value
 const icon = getIcon(type);
 const tags = type ? "object/" + tp.user.toCamelCase(type) : '';
-const sub = formatSub(icon, type);
+const sub = formatSub(icon, type, is_magical, is_cursed);
 
 if (result.status === 'ok') {
     await tp.file.rename(name);
@@ -66,9 +73,9 @@ ___
 >>[!hint]- NPC's
 >>```dataview
 >>LIST WITHOUT ID headerLink
->FROM "Compendium/NPC's" AND [[<% name %>]]
+>>FROM "Compendium/NPC's" AND [[<% name %>]]
 >
 >>[!note]- HISTORY
 >>```dataview
->LIST WITHOUT ID headerLink
->FROM "Session Notes" AND [[<% name %>]]
+>>LIST WITHOUT ID headerLink
+>>FROM "Session Notes" AND [[<% name %>]]

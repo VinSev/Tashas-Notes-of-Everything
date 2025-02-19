@@ -436,7 +436,35 @@
           "isRequired": false,
           "input": {
             "type": "dataview",
-            "query": "['Armor','Jewelry','Magic Item','Weapon','Religious Artifact','Treasure']"
+            "query": "['Weapon', 'Armor', 'Clothing', 'Jewelry', 'Relic', 'Religious Artifact', 'Potion', 'Scroll', 'Poison']"
+          }
+        },
+        {
+          "name": "Magical",
+          "label": "Is Magical:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "toggle"
+          }
+        },
+        {
+          "name": "Cursed",
+          "label": "Is Cursed:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "toggle"
+          }
+        },
+        {
+          "name": "Rarity",
+          "label": "Rarity:",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "dataview",
+            "query": "['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary']"
           }
         }
       ],
