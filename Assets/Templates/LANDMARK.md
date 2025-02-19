@@ -104,7 +104,7 @@ if (result.status === 'ok') {
 _%>
 
 ---
-cssClasses: grayTable, wideTable
+cssClasses: wideTable
 type: landmark
 locations:
 - <% location ? `"[[${location}]]"` : '' %>
