@@ -445,7 +445,8 @@
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "toggle"
+            "type": "toggle",
+            "hidden": false
           }
         },
         {
@@ -454,7 +455,8 @@
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "toggle"
+            "type": "toggle",
+            "hidden": false
           }
         },
         {
