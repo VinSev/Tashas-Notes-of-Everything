@@ -5,7 +5,7 @@
 
 function formatSub(icon, type) {
 	return [
-		type && `{icon} {type} Event`
+		type && `${icon} ${type} Event`
 	]
   	.filter(sub => sub)
   	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
