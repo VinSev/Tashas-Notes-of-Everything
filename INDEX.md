@@ -1,15 +1,14 @@
 ---
 cssClasses: index
 ---
+
 ![[compendium.jpg|banner]]
 ###### <span class="head">Campaign Journal</span> 
  
 ```dataviewjs
-// Set path and class
 const vault = this.app.vault.adapter.getResourcePath("").split("?")[0];
 dv.container.className += ' hideSort cards cards-cover cards-1-1';
 
-// Display PC card table
 dv.table(["cover", "name", "details"],
   dv.pages(`"Compendium/Party/Player Characters"`)
   .sort(page => page.file.name, "asc")
@@ -21,7 +20,7 @@ dv.table(["cover", "name", "details"],
 );
 ```
 
-> [!npc]-   NPC's<br><span class="sub">Non-Player Characters</span>
+> [!npc]- NPC's<br><span class="sub">Non-Player Characters</span>
 > ```dataviewjs
 > dv.container.className += ' listMe';
 > let pages = dv.pages('"Compendium/NPC\'s"').sort(p => p.file.name, "asc");  
@@ -29,7 +28,7 @@ dv.table(["cover", "name", "details"],
 >```
 > `BUTTON[npc]`
 
-> [!agenda]-  The Party<br><span class="sub">Objectives, Players, & Quests</span>
+> [!agenda]- The Party<br><span class="sub">Objectives, Players & Quests</span>
 >```dataviewjs
 > dv.container.className += ' listMe';
 > let tags = [];
@@ -41,9 +40,9 @@ dv.table(["cover", "name", "details"],
 > return [`- ${page.headerLink} ${status}`, status];
 > }));
 >```
-> `BUTTON[pc]` `BUTTON[quest]`
+> `BUTTON[pc, quest]`
 
-> [!genloc]-  Locations<br><span class="sub">Countries, Settlements, & Topography</span>
+> [!genloc]- Locations<br><span class="sub">Countries, Settlements & Topography</span>
 > ```dataviewjs
 > dv.container.className += ' listMe';
 > let pages = dv.pages('"Compendium/Atlas"').sort(p => p.file.name, "asc");  
@@ -51,7 +50,7 @@ dv.table(["cover", "name", "details"],
 >```
 >`BUTTON[plane, realm, continent, territory, province, locale, landmark]`
 
-> [!lore]-  Lore & Mythos<br><span class="sub">Factions, Gods, Relics, & More</span> 
+> [!lore]-  Lore & Mythos<br><span class="sub">Factions, Gods, Relics & More</span> 
 > ```dataviewjs
 > dv.container.className += ' listMe';
 > let pages = dv.pages('"Compendium/Lore"').sort(p => p.file.name, "asc");  
@@ -59,7 +58,7 @@ dv.table(["cover", "name", "details"],
 >```
 > `BUTTON[deity, event, object, org]`
  
-> [!session]-  Session Notes<br><span class="sub">Summaries, Transcripts, & Notes</span>
+> [!session]-  Session Notes<br><span class="sub">Summaries, Transcripts & Notes</span>
 > ```dataviewjs
 > dv.container.className += ' listMe';
 > let pages = dv.pages('"Session Notes"').sort(p => p.file.name, "desc");  
