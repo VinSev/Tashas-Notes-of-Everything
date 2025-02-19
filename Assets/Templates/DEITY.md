@@ -62,7 +62,7 @@ ___
 
 
 > [!column|flex 3]
->>[!hint]-  NPC's
+>>[!hint]- NPC's
 >>```dataview
 >>LIST WITHOUT ID headerLink
 >>FROM "Compendium/NPC's" AND [[<% name %>]] 
