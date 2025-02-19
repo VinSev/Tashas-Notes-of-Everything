@@ -47,7 +47,7 @@ type: notes
 locations:
 - <% location ? `"[[${location}]]"` : '' %>
 tags:
-- <% tags ? tags : '' %>
+<% tags ? tags : ' - ' %>
 headerLink: "[[<% name %>#<% title %>|<% name %>]]"
 ---
 

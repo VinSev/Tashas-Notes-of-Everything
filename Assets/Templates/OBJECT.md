@@ -58,7 +58,7 @@ _%>
 ---
 type: object
 tags:
-- <% tags ? tags : '' %>
+<% tags ? tags : ' - ' %>
 headerLink: "[[<% name %>#<% name %>]]"
 ---
 

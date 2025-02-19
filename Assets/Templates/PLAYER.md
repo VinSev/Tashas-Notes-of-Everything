@@ -69,7 +69,7 @@ if (result.status === 'ok') {
 ---
 type: pc
 tags:
-<% tags ? tags : ' - ' %>
+ <% tags ? tags : ' - ' %>
 headerLink: "[[<% name %>#<% name %>]]"
 level: "<% level ? level : '' %>"
 race: "<% race ? race : '' %>"

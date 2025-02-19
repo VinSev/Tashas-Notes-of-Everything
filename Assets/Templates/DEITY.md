@@ -39,7 +39,7 @@ _%>
 ---
 type: deity
 tags:
-- <% tags ? tags : '' %>
+<% tags ? tags : ' - ' %>
 headerLink: "[[<% name %>#<% name %>]]"
 ---
 

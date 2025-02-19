@@ -42,9 +42,10 @@ target: <% target === "[ Group Quest ]" ? 'groupQuest' : target ? `"[[${target}]
 locations:
 - <% location ? `"[[${location}]]"` : '' %>
 tags:
-- <% tags ? tags : '' %>
+<% tags ? tags : ' - ' %>
 headerLink: "[[<% name %>#<% name %>]]"
 ---
+
 ###### <% name %>
 <span class="sub2"><% sub ? sub : '' %></span>
 ___

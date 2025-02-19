@@ -46,7 +46,7 @@ _%>
 ---
 type: event
 tags:
-- <% tags ? tags : '' %>
+<% tags ? tags : ' - ' %>
 headerLink: "[[<% name %>#<% name %>]]"
 ---
 
