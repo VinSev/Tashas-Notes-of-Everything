@@ -5,8 +5,8 @@
 
 function formatSub(alignment) {
 	return [
-		`:FasPerson: Player Character`,
-        alignment && `:FasYinYang: ${alignment}`
+		`:FasPerson: Player Character`, 
+		alignment && `:FasYinYang: ${alignment}`
 	]
   	.filter(sub => sub)
   	.join('&nbsp;&nbsp;|&nbsp;&nbsp;');
@@ -14,8 +14,8 @@ function formatSub(alignment) {
 
 function formatTags(pclass, race) {
     return [
-    	pClass && ` - class/${tp.user.toCamelCase(pClass)}`,
-        race && ` - race/${tp.user.toCamelCase(race)}`
+	    pClass && ` - class/${tp.user.toCamelCase(pClass)}`,
+	    race && ` - race/${tp.user.toCamelCase(race)}`
     ]
     .filter(tag => tag)
     .join('\n');
@@ -69,7 +69,7 @@ if (result.status === 'ok') {
 ---
 type: pc
 tags:
-- <% tags ? tags : '' %>
+<% tags ? tags : ' - ' %>
 headerLink: "[[<% name %>#<% name %>]]"
 level: "<% level ? level : '' %>"
 race: "<% race ? race : '' %>"
