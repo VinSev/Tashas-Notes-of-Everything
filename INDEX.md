@@ -50,7 +50,7 @@ dv.table(["cover", "name", "details"],
 >```
 >`BUTTON[plane, realm, continent, territory, province, locale, landmark]`
 
-> [!lore]-  Lore & Mythos<br><span class="sub">Factions, Gods, Relics & More</span> 
+> [!lore]-  Lore & Mythos<br><span class="sub">Factions, Deities, Relics & More</span> 
 > ```dataviewjs
 > dv.container.className += ' listMe';
 > let pages = dv.pages('"Compendium/Lore"').sort(p => p.file.name, "asc");  
