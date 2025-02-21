@@ -65,9 +65,11 @@ ___
 >>[!hint]- NPC's
 >>```dataview
 >>LIST WITHOUT ID headerLink
->>FROM "Compendium/NPC's" AND [[<% name %>]] 
->
+>>FROM "Compendium/NPC's" AND [[<% name %>]]
+>>SORT file.name ASC
+> 
 >>[!note]- HISTORY
 >>```dataview
 >>LIST WITHOUT ID headerLink
 >>FROM "Session Notes" AND [[<% name %>]]
+>>SORT file.ctime DESC

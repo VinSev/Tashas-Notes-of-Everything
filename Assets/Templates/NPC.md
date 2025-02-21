@@ -81,8 +81,10 @@ ___
 >>```dataview
 >>LIST WITHOUT ID headerLink
 >>FROM "Compendium/Party/Quests" AND [[<% name %>]]
+>>SORT file.ctime DESC
 >
 >>[!note]- HISTORY
 >>```dataview
 >>LIST WITHOUT ID headerLink
 >>FROM "Session Notes" AND [[<% name %>]]
+>>SORT file.ctime DESC

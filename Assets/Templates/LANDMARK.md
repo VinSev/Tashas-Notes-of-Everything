@@ -109,7 +109,7 @@ type: landmark
 locations:
 - <% location ? `"[[${location}]]"` : '' %>
 tags:
-<% tags ? tags : ' - ' %>
+ - <% tags ? tags : '' %>
 headerLink: "[[<% name %>#<% name %>]]"
 ---
 
